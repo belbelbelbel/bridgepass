@@ -110,7 +110,7 @@ function Navbar() {
                                     className: "w-8 h-8 bg-primary rounded-lg flex items-center justify-center",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "text-primary-foreground font-bold text-lg",
-                                        children: "N"
+                                        children: "B"
                                     }, void 0, false, {
                                         fileName: "[project]/components/navbar.tsx",
                                         lineNumber: 18,
@@ -123,7 +123,7 @@ function Navbar() {
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                     className: "font-bold text-foreground hidden sm:inline",
-                                    children: "Naira Bridge"
+                                    children: "BridgePass"
                                 }, void 0, false, {
                                     fileName: "[project]/components/navbar.tsx",
                                     lineNumber: 20,
@@ -1177,7 +1177,7 @@ function Testimonials() {
         {
             name: 'Chioma Adeyemi',
             role: 'Director, Education for All Nigeria',
-            content: 'Naira Bridge reduced our currency conversion costs by 35%. The audit reports have made our donors incredibly happy.',
+            content: 'BridgePass reduced our currency conversion costs by 35%. The audit reports have made our donors incredibly happy.',
             rating: 5,
             initials: 'CA'
         },

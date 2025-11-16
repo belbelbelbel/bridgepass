@@ -1,0 +1,11 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/dashboard/convert/page": "/dashboard/convert",
+  "/dashboard/page": "/dashboard",
+  "/dashboard/reports/page": "/dashboard/reports",
+  "/dashboard/settings/page": "/dashboard/settings",
+  "/dashboard/wallets/page": "/dashboard/wallets",
+  "/login/page": "/login",
+  "/page": "/"
+}

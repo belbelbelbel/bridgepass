@@ -1,0 +1,11 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/dashboard/convert/page": "app/dashboard/convert/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/dashboard/reports/page": "app/dashboard/reports/page.js",
+  "/dashboard/settings/page": "app/dashboard/settings/page.js",
+  "/dashboard/wallets/page": "app/dashboard/wallets/page.js",
+  "/login/page": "app/login/page.js",
+  "/page": "app/page.js"
+}

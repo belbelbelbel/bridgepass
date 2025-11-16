@@ -6,7 +6,7 @@ export default function Testimonials() {
     {
       name: 'Chioma Adeyemi',
       role: 'Director, Education for All Nigeria',
-      content: 'Naira Bridge reduced our currency conversion costs by 35%. The audit reports have made our donors incredibly happy.',
+      content: 'BridgePass reduced our currency conversion costs by 35%. The audit reports have made our donors incredibly happy.',
       rating: 5,
       initials: 'CA'
     },
