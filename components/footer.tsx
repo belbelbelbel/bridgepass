@@ -35,7 +35,7 @@ export default function Footer() {
               <li><Link href="#" className="text-sm text-muted-foreground hover:text-foreground">About</Link></li>
               <li><Link href="#" className="text-sm text-muted-foreground hover:text-foreground">Blog</Link></li>
               <li><Link href="#" className="text-sm text-muted-foreground hover:text-foreground">Careers</Link></li>
-              <li><Link href="#" className="text-sm text-muted-foreground hover:text-foreground">Contact</Link></li>
+              <li><Link href="mailto:support@nairabridge.com" className="text-sm text-muted-foreground hover:text-foreground">Contact</Link></li>
             </ul>
           </div>
 
@@ -43,10 +43,10 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
-              <li><Link href="#" className="text-sm text-muted-foreground hover:text-foreground">Docs</Link></li>
-              <li><Link href="#" className="text-sm text-muted-foreground hover:text-foreground">API</Link></li>
-              <li><Link href="#" className="text-sm text-muted-foreground hover:text-foreground">Support</Link></li>
-              <li><Link href="#" className="text-sm text-muted-foreground hover:text-foreground">FAQ</Link></li>
+              <li><Link href="/support" className="text-sm text-muted-foreground hover:text-foreground">Help Center</Link></li>
+              <li><Link href="/support/tickets/new" className="text-sm text-muted-foreground hover:text-foreground">Support</Link></li>
+              <li><Link href="/support/chat" className="text-sm text-muted-foreground hover:text-foreground">Live Chat</Link></li>
+              <li><Link href="#faq" className="text-sm text-muted-foreground hover:text-foreground">FAQ</Link></li>
             </ul>
           </div>
 

@@ -35,32 +35,32 @@ export default function FAQSection() {
   ]
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="faq" className="py-24 px-4 sm:px-6 lg:px-8 bg-white border-t border-gray-200">
       <div className="max-w-3xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
-          <p className="text-lg text-muted-foreground">Everything you need to know about Naira Bridge</p>
+        <div className="text-center mb-20">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Frequently Asked Questions</h2>
+          <p className="text-base text-gray-600">Everything you need to know about Naira Bridge</p>
         </div>
 
-        <div className="space-y-3">
+        <div className="space-y-4">
           {faqs.map((faq, idx) => (
-            <div key={idx} className="border border-border rounded-lg overflow-hidden">
+            <div key={idx} className="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm">
               <button
                 onClick={() => setOpenId(openId === idx ? -1 : idx)}
-                className="w-full flex items-center justify-between p-6 hover:bg-muted/50 transition-colors text-left"
+                className="w-full flex items-center justify-between p-6 hover:bg-gray-50 transition-colors text-left"
               >
-                <span className="font-semibold text-foreground">{faq.question}</span>
+                <span className="font-semibold text-black">{faq.question}</span>
                 <ChevronDown
                   className={cn(
-                    'w-5 h-5 text-muted-foreground transition-transform',
+                    'w-5 h-5 text-gray-600 transition-transform',
                     openId === idx && 'transform rotate-180'
                   )}
                 />
               </button>
 
               {openId === idx && (
-                <div className="px-6 pb-6 pt-0 border-t border-border">
-                  <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
+                <div className="px-6 pb-6 pt-0 border-t border-gray-200">
+                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
                 </div>
               )}
             </div>

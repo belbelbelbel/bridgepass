@@ -8,7 +8,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 const _inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: 'BridgePass - NGO Currency Conversion Platform',
+  title: 'Naira Bridge - NGO Currency Conversion Platform',
   description: 'Convert foreign donations to Nigerian Naira at the best rates with full transparency and audit-friendly reports',
   icons: {
     icon: [

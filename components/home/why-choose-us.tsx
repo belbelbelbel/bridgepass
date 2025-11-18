@@ -35,19 +35,21 @@ export default function WhyChooseUs() {
   ]
 
   return (
-    <section id="features" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
+    <section id="features" className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Why NGOs Choose Naira Bridge</h2>
-          <p className="text-lg text-muted-foreground">Everything you need for transparent, efficient foreign exchange</p>
+        <div className="text-center mb-20">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Why NGOs Choose Naira Bridge</h2>
+          <p className="text-base text-gray-600">Everything you need for transparent, efficient foreign exchange</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, idx) => (
-            <div key={idx} className="p-6 bg-background border border-border rounded-xl hover:border-accent/50 hover:shadow-lg transition-all duration-300">
-              <feature.icon className="w-10 h-10 text-accent mb-4" />
-              <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-              <p className="text-muted-foreground text-sm">{feature.description}</p>
+            <div key={idx} className="p-8 bg-white border border-gray-200 rounded-lg hover:border-gray-300 transition-colors shadow-sm">
+              <div className="w-14 h-14 bg-white border border-gray-200 rounded-lg flex items-center justify-center mb-6 shadow-sm">
+                <feature.icon className="w-7 h-7 text-black" />
+              </div>
+              <h3 className="text-lg font-bold mb-3 text-black">{feature.title}</h3>
+              <p className="text-sm text-gray-600 leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>

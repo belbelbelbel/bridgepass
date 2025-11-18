@@ -49,11 +49,11 @@ export default function PricingSection() {
   ]
 
   return (
-    <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
+    <section id="pricing" className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 border-t border-gray-200">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">Transparent Pricing</h2>
-          <p className="text-lg text-muted-foreground">No hidden fees. Only pay for what you use.</p>
+        <div className="text-center mb-20">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Transparent Pricing</h2>
+          <p className="text-base text-gray-600">No hidden fees. Only pay for what you use.</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -74,12 +74,12 @@ export default function PricingSection() {
                 </div>
               )}
 
-              <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
+              <h3 className="text-xl font-bold mb-2">{plan.name}</h3>
               <p className="text-sm text-muted-foreground mb-6">{plan.description}</p>
 
               <div className="mb-8">
-                <span className="text-4xl font-bold">{plan.price}</span>
-                {plan.period && <span className="text-muted-foreground">{plan.period}</span>}
+                <span className="text-3xl font-bold">{plan.price}</span>
+                {plan.period && <span className="text-sm text-muted-foreground">{plan.period}</span>}
               </div>
 
               <Button

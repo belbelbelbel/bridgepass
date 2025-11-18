@@ -1,3 +1,6 @@
+'use client'
+
+import Link from 'next/link'
 import { Bell, HelpCircle, Settings } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
@@ -10,15 +13,19 @@ export default function TopNav() {
       </div>
       
       <div className="flex items-center gap-4">
-        <Button variant="ghost" size="icon">
-          <HelpCircle className="w-5 h-5 text-muted-foreground" />
-        </Button>
-        <Button variant="ghost" size="icon">
+        <Link href="/support">
+          <Button variant="ghost" size="icon" title="Help & Support">
+            <HelpCircle className="w-5 h-5 text-muted-foreground" />
+          </Button>
+        </Link>
+        <Button variant="ghost" size="icon" title="Notifications">
           <Bell className="w-5 h-5 text-muted-foreground" />
         </Button>
-        <Button variant="ghost" size="icon">
-          <Settings className="w-5 h-5 text-muted-foreground" />
-        </Button>
+        <Link href="/dashboard/settings">
+          <Button variant="ghost" size="icon" title="Settings">
+            <Settings className="w-5 h-5 text-muted-foreground" />
+          </Button>
+        </Link>
       </div>
     </header>
   )

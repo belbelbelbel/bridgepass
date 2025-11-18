@@ -102,7 +102,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$vercel$2f$
 ;
 ;
 const metadata = {
-    title: 'BridgePass - NGO Currency Conversion Platform',
+    title: 'Naira Bridge - NGO Currency Conversion Platform',
     description: 'Convert foreign donations to Nigerian Naira at the best rates with full transparency and audit-friendly reports',
     icons: {
         icon: [

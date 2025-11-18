@@ -8,27 +8,54 @@ import { useState } from 'react'
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith('#')) {
+      e.preventDefault()
+      const element = document.querySelector(href)
+      if (element) {
+        const offset = 80 // Account for sticky navbar height
+        const elementPosition = element.getBoundingClientRect().top
+        const offsetPosition = elementPosition + window.pageYOffset - offset
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        })
+      }
+      setIsOpen(false) // Close mobile menu
+    }
+  }
+
   return (
     <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-lg">N</span>
             </div>
             <span className="font-bold text-foreground hidden sm:inline">Naira Bridge</span>
           </Link>
-
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-8">
-            <Link href="#how-it-works" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
+          <div className="hidden md:flex  items-center gap-8">
+            <Link 
+              href="#how-it-works" 
+              onClick={(e) => handleSmoothScroll(e, '#how-it-works')}
+              className="text-muted-foreground hover:text-foreground transition-colors text-sm"
+            >
               How it Works
             </Link>
-            <Link href="#features" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
+            <Link 
+              href="#features" 
+              onClick={(e) => handleSmoothScroll(e, '#features')}
+              className="text-muted-foreground hover:text-foreground transition-colors text-sm"
+            >
               Features
             </Link>
-            <Link href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
+            <Link 
+              href="#pricing" 
+              onClick={(e) => handleSmoothScroll(e, '#pricing')}
+              className="text-muted-foreground hover:text-foreground transition-colors text-sm"
+            >
               Pricing
             </Link>
             <Link href="#" className="text-muted-foreground hover:text-foreground transition-colors text-sm">
@@ -38,14 +65,14 @@ export default function Navbar() {
 
           {/* Right Actions */}
           <div className="hidden md:flex items-center gap-4">
-            <Link href="/login">
+            <Link href="/auth/login">
               <Button variant="ghost" size="sm">
                 Sign In
               </Button>
             </Link>
-            <Link href="/dashboard">
+            <Link href="/auth/register">
               <Button size="sm">
-                Get Started
+                Register
               </Button>
             </Link>
           </div>
@@ -73,12 +100,16 @@ export default function Navbar() {
                 Pricing
               </Link>
               <div className="px-4 pt-4 flex flex-col gap-2">
-                <Button variant="outline" className="w-full">
-                  Sign In
-                </Button>
-                <Button className="w-full">
-                  Get Started
-                </Button>
+                <Link href="/login">
+                  <Button variant="outline" className="w-full">
+                    Sign In
+                  </Button>
+                </Link>
+                <Link href="/auth/register">
+                  <Button className="w-full">
+                    Register
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

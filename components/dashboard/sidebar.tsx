@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { LayoutDashboard, ArrowRightLeft, Wallet, FileText, Settings, LogOut, ChevronRight } from 'lucide-react'
+import { LayoutDashboard, ArrowRightLeft, Wallet, FileText, Settings, LogOut, ChevronRight, HelpCircle } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 
@@ -15,6 +15,10 @@ export default function DashboardSidebar() {
     { href: '/dashboard/wallets', label: 'Wallets', icon: Wallet },
     { href: '/dashboard/reports', label: 'Audit Reports', icon: FileText },
     { href: '/dashboard/settings', label: 'Settings', icon: Settings }
+  ]
+
+  const supportItems = [
+    { href: '/support', label: 'Help & Support', icon: HelpCircle }
   ]
 
   return (
@@ -50,6 +54,26 @@ export default function DashboardSidebar() {
             </div>
           </Link>
         ))}
+
+        {/* Support Section */}
+        <div className="pt-4 mt-4 border-t border-border">
+          {supportItems.map((item) => (
+            <Link key={item.href} href={item.href}>
+              <div
+                className={cn(
+                  'flex items-center gap-3 px-4 py-3 rounded-lg transition-colors text-sm font-medium',
+                  pathname === item.href
+                    ? 'bg-primary text-primary-foreground'
+                    : 'text-muted-foreground hover:bg-muted'
+                )}
+              >
+                <item.icon className="w-4 h-4" />
+                <span className="flex-1">{item.label}</span>
+                {pathname === item.href && <ChevronRight className="w-4 h-4" />}
+              </div>
+            </Link>
+          ))}
+        </div>
       </nav>
 
       {/* User Profile */}
