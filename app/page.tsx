@@ -58,9 +58,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-full h-[90vh] px-4 sm:px-6 lg:px-8 bg-white flex items-center justify-center">
+      <section className="w-full h-[70vh] px-4 sm:px-6 lg:px-8 bg-white flex items-center justify-center">
         <div className="w-full max-w-5xl mx-auto text-center flex flex-col items-center justify-center space-y-6 sm:space-y-8">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-tight px-4">
+          <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold text-black leading-tight px-4">
             Secure International Payments for NGOs
           </h1>
           <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">

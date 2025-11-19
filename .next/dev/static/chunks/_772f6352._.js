@@ -64,12 +64,12 @@ function OrgDetailsStep({ data, setData, errors }) {
         return Math.round(bytes / Math.pow(k, i) * 100) / 100 + ' ' + sizes[i];
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "space-y-6",
+        className: "space-y-4 sm:space-y-6",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                        className: "text-2xl font-bold text-primary mb-2",
+                        className: "text-xl sm:text-2xl font-bold text-primary mb-1 sm:mb-2",
                         children: "Organization Details"
                     }, void 0, false, {
                         fileName: "[project]/components/onboarding-steps/org-details-step.tsx",
@@ -77,7 +77,7 @@ function OrgDetailsStep({ data, setData, errors }) {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "text-foreground/70",
+                        className: "text-xs sm:text-sm text-foreground/70",
                         children: "Tell us about your NGO"
                     }, void 0, false, {
                         fileName: "[project]/components/onboarding-steps/org-details-step.tsx",
@@ -93,7 +93,7 @@ function OrgDetailsStep({ data, setData, errors }) {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                        className: "block text-sm font-medium text-foreground mb-2",
+                        className: "block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2",
                         children: "Organization Name *"
                     }, void 0, false, {
                         fileName: "[project]/components/onboarding-steps/org-details-step.tsx",
@@ -105,23 +105,29 @@ function OrgDetailsStep({ data, setData, errors }) {
                         placeholder: "Enter your NGO's registered name",
                         value: data.orgName,
                         onChange: (e)=>handleChange('orgName', e.target.value),
-                        className: `w-full px-4 py-3 border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all ${errors.orgName ? 'border-destructive' : 'border-border'}`
+                        className: `w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all ${errors.orgName ? 'border-destructive' : 'border-border'}`
                     }, void 0, false, {
                         fileName: "[project]/components/onboarding-steps/org-details-step.tsx",
                         lineNumber: 64,
                         columnNumber: 9
                     }, this),
                     errors.orgName && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex items-center gap-2 mt-2 text-destructive text-sm",
+                        className: "flex items-center gap-2 mt-1 sm:mt-2 text-destructive text-xs sm:text-sm",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$alert$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__AlertCircle$3e$__["AlertCircle"], {
-                                className: "w-4 h-4"
+                                className: "w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0"
                             }, void 0, false, {
                                 fileName: "[project]/components/onboarding-steps/org-details-step.tsx",
                                 lineNumber: 75,
                                 columnNumber: 13
                             }, this),
-                            errors.orgName
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                children: errors.orgName
+                            }, void 0, false, {
+                                fileName: "[project]/components/onboarding-steps/org-details-step.tsx",
+                                lineNumber: 76,
+                                columnNumber: 13
+                            }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/onboarding-steps/org-details-step.tsx",
@@ -137,7 +143,7 @@ function OrgDetailsStep({ data, setData, errors }) {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                        className: "block text-sm font-medium text-foreground mb-2",
+                        className: "block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2",
                         children: "CAC Certificate Number *"
                     }, void 0, false, {
                         fileName: "[project]/components/onboarding-steps/org-details-step.tsx",
@@ -149,23 +155,29 @@ function OrgDetailsStep({ data, setData, errors }) {
                         placeholder: "e.g., RC123456789",
                         value: data.cacCertificate,
                         onChange: (e)=>handleChange('cacCertificate', e.target.value),
-                        className: `w-full px-4 py-3 border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all ${errors.cacCertificate ? 'border-destructive' : 'border-border'}`
+                        className: `w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all ${errors.cacCertificate ? 'border-destructive' : 'border-border'}`
                     }, void 0, false, {
                         fileName: "[project]/components/onboarding-steps/org-details-step.tsx",
                         lineNumber: 85,
                         columnNumber: 9
                     }, this),
                     errors.cacCertificate && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex items-center gap-2 mt-2 text-destructive text-sm",
+                        className: "flex items-center gap-2 mt-1 sm:mt-2 text-destructive text-xs sm:text-sm",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$alert$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__AlertCircle$3e$__["AlertCircle"], {
-                                className: "w-4 h-4"
+                                className: "w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0"
                             }, void 0, false, {
                                 fileName: "[project]/components/onboarding-steps/org-details-step.tsx",
                                 lineNumber: 96,
                                 columnNumber: 13
                             }, this),
-                            errors.cacCertificate
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                children: errors.cacCertificate
+                            }, void 0, false, {
+                                fileName: "[project]/components/onboarding-steps/org-details-step.tsx",
+                                lineNumber: 97,
+                                columnNumber: 13
+                            }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/onboarding-steps/org-details-step.tsx",
@@ -181,7 +193,7 @@ function OrgDetailsStep({ data, setData, errors }) {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                        className: "block text-sm font-medium text-foreground mb-2",
+                        className: "block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2",
                         children: "Tax Identification Number (TIN) *"
                     }, void 0, false, {
                         fileName: "[project]/components/onboarding-steps/org-details-step.tsx",
@@ -193,23 +205,29 @@ function OrgDetailsStep({ data, setData, errors }) {
                         placeholder: "Enter your TIN",
                         value: data.tin,
                         onChange: (e)=>handleChange('tin', e.target.value),
-                        className: `w-full px-4 py-3 border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all ${errors.tin ? 'border-destructive' : 'border-border'}`
+                        className: `w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all ${errors.tin ? 'border-destructive' : 'border-border'}`
                     }, void 0, false, {
                         fileName: "[project]/components/onboarding-steps/org-details-step.tsx",
                         lineNumber: 106,
                         columnNumber: 9
                     }, this),
                     errors.tin && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "flex items-center gap-2 mt-2 text-destructive text-sm",
+                        className: "flex items-center gap-2 mt-1 sm:mt-2 text-destructive text-xs sm:text-sm",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$alert$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__AlertCircle$3e$__["AlertCircle"], {
-                                className: "w-4 h-4"
+                                className: "w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0"
                             }, void 0, false, {
                                 fileName: "[project]/components/onboarding-steps/org-details-step.tsx",
                                 lineNumber: 117,
                                 columnNumber: 13
                             }, this),
-                            errors.tin
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                children: errors.tin
+                            }, void 0, false, {
+                                fileName: "[project]/components/onboarding-steps/org-details-step.tsx",
+                                lineNumber: 118,
+                                columnNumber: 13
+                            }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/onboarding-steps/org-details-step.tsx",
@@ -225,7 +243,7 @@ function OrgDetailsStep({ data, setData, errors }) {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                        className: "block text-sm font-medium text-foreground mb-2",
+                        className: "block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2",
                         children: "Board Resolution File (Optional)"
                     }, void 0, false, {
                         fileName: "[project]/components/onboarding-steps/org-details-step.tsx",
@@ -233,22 +251,22 @@ function OrgDetailsStep({ data, setData, errors }) {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "space-y-3",
+                        className: "space-y-2 sm:space-y-3",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                 type: "button",
                                 onClick: ()=>fileInputRef.current?.click(),
-                                className: "w-full flex items-center justify-center gap-2 px-4 py-3 border-2 border-dashed border-border rounded-lg hover:border-primary/50 hover:bg-background/50 transition-all",
+                                className: "w-full flex items-center justify-center gap-2 px-3 sm:px-4 py-2.5 sm:py-3 border-2 border-dashed border-border rounded-lg hover:border-primary/50 hover:bg-background/50 transition-all",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$upload$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Upload$3e$__["Upload"], {
-                                        className: "w-4 h-4"
+                                        className: "w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0"
                                     }, void 0, false, {
                                         fileName: "[project]/components/onboarding-steps/org-details-step.tsx",
                                         lineNumber: 133,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                        className: "text-sm font-medium",
+                                        className: "text-xs sm:text-sm font-medium",
                                         children: "Click to upload board resolution"
                                     }, void 0, false, {
                                         fileName: "[project]/components/onboarding-steps/org-details-step.tsx",
@@ -281,13 +299,13 @@ function OrgDetailsStep({ data, setData, errors }) {
                                 columnNumber: 11
                             }, this),
                             boardResolutionFile && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex items-center justify-between p-3 bg-background rounded-lg border border-border",
+                                className: "flex items-center justify-between p-2 sm:p-3 bg-background rounded-lg border border-border",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "flex items-center gap-2 min-w-0 flex-1",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$file$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__FileIcon$3e$__["FileIcon"], {
-                                                className: "w-4 h-4 text-primary flex-shrink-0"
+                                                className: "w-3 h-3 sm:w-4 sm:h-4 text-primary flex-shrink-0"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/onboarding-steps/org-details-step.tsx",
                                                 lineNumber: 148,
@@ -297,7 +315,7 @@ function OrgDetailsStep({ data, setData, errors }) {
                                                 className: "min-w-0 flex-1",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                        className: "text-sm font-medium truncate",
+                                                        className: "text-xs sm:text-sm font-medium truncate",
                                                         children: boardResolutionFile.name
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/onboarding-steps/org-details-step.tsx",
@@ -327,9 +345,9 @@ function OrgDetailsStep({ data, setData, errors }) {
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         type: "button",
                                         onClick: removeBoardResolutionFile,
-                                        className: "p-1.5 hover:bg-destructive/10 rounded transition-colors flex-shrink-0",
+                                        className: "p-1 sm:p-1.5 hover:bg-destructive/10 rounded transition-colors flex-shrink-0",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
-                                            className: "w-4 h-4 text-destructive"
+                                            className: "w-3 h-3 sm:w-4 sm:h-4 text-destructive"
                                         }, void 0, false, {
                                             fileName: "[project]/components/onboarding-steps/org-details-step.tsx",
                                             lineNumber: 159,
@@ -463,12 +481,12 @@ function DocumentsStep({ data, setData, errors }) {
         fileInputRef.current?.click();
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "space-y-6",
+        className: "space-y-4 sm:space-y-6",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                        className: "text-2xl font-bold text-primary mb-2",
+                        className: "text-xl sm:text-2xl font-bold text-primary mb-1 sm:mb-2",
                         children: "Required Documents"
                     }, void 0, false, {
                         fileName: "[project]/components/onboarding-steps/documents-step.tsx",
@@ -476,7 +494,7 @@ function DocumentsStep({ data, setData, errors }) {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "text-foreground/70",
+                        className: "text-xs sm:text-sm text-foreground/70",
                         children: "Upload CAC certificate, board resolution, and any supporting documents"
                     }, void 0, false, {
                         fileName: "[project]/components/onboarding-steps/documents-step.tsx",
@@ -495,17 +513,17 @@ function DocumentsStep({ data, setData, errors }) {
                 onDragOver: handleDrag,
                 onDrop: handleDrop,
                 onClick: handleUploadClick,
-                className: `border-2 border-dashed rounded-lg p-12 text-center cursor-pointer transition-all ${dragActive ? 'border-primary bg-primary/5' : 'border-border hover:border-primary/50 hover:bg-background/50'}`,
+                className: `border-2 border-dashed rounded-lg p-6 sm:p-8 lg:p-12 text-center cursor-pointer transition-all ${dragActive ? 'border-primary bg-primary/5' : 'border-border hover:border-primary/50 hover:bg-background/50'}`,
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$upload$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Upload$3e$__["Upload"], {
-                        className: `w-8 h-8 mx-auto mb-3 ${dragActive ? 'text-primary' : 'text-foreground/50'}`
+                        className: `w-6 h-6 sm:w-8 sm:h-8 mx-auto mb-2 sm:mb-3 ${dragActive ? 'text-primary' : 'text-foreground/50'}`
                     }, void 0, false, {
                         fileName: "[project]/components/onboarding-steps/documents-step.tsx",
                         lineNumber: 106,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "font-medium text-foreground mb-1",
+                        className: "text-sm sm:text-base font-medium text-foreground mb-1",
                         children: "Drag files here or click to upload"
                     }, void 0, false, {
                         fileName: "[project]/components/onboarding-steps/documents-step.tsx",
@@ -513,7 +531,7 @@ function DocumentsStep({ data, setData, errors }) {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "text-sm text-foreground/70",
+                        className: "text-xs sm:text-sm text-foreground/70",
                         children: "Supports PDF, JPG, PNG (Max 10MB each)"
                     }, void 0, false, {
                         fileName: "[project]/components/onboarding-steps/documents-step.tsx",
@@ -539,16 +557,22 @@ function DocumentsStep({ data, setData, errors }) {
                 columnNumber: 7
             }, this),
             errors.documents && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex items-center gap-2 p-4 bg-destructive/10 border border-destructive/30 rounded-lg text-destructive text-sm",
+                className: "flex items-center gap-2 p-3 sm:p-4 bg-destructive/10 border border-destructive/30 rounded-lg text-destructive text-xs sm:text-sm",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$alert$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__AlertCircle$3e$__["AlertCircle"], {
-                        className: "w-4 h-4 flex-shrink-0"
+                        className: "w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0"
                     }, void 0, false, {
                         fileName: "[project]/components/onboarding-steps/documents-step.tsx",
                         lineNumber: 121,
                         columnNumber: 11
                     }, this),
-                    errors.documents
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        children: errors.documents
+                    }, void 0, false, {
+                        fileName: "[project]/components/onboarding-steps/documents-step.tsx",
+                        lineNumber: 122,
+                        columnNumber: 11
+                    }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/onboarding-steps/documents-step.tsx",
@@ -558,7 +582,7 @@ function DocumentsStep({ data, setData, errors }) {
             data.documents.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                        className: "font-medium text-foreground mb-3",
+                        className: "text-sm sm:text-base font-medium text-foreground mb-2 sm:mb-3",
                         children: [
                             "Uploaded Documents (",
                             data.documents.length,
@@ -572,13 +596,13 @@ function DocumentsStep({ data, setData, errors }) {
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "space-y-2",
                         children: data.documents.map((doc)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex items-center justify-between p-4 bg-background rounded-lg border border-border hover:border-primary/30 transition-all",
+                                className: "flex items-center justify-between p-3 sm:p-4 bg-background rounded-lg border border-border hover:border-primary/30 transition-all",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex items-center gap-3 flex-1 min-w-0",
+                                        className: "flex items-center gap-2 sm:gap-3 flex-1 min-w-0",
                                         children: [
                                             doc.preview ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "flex-shrink-0 w-12 h-12 rounded-lg bg-background border border-border overflow-hidden",
+                                                className: "flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-background border border-border overflow-hidden",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
                                                     src: doc.preview || "/placeholder.svg",
                                                     alt: doc.name,
@@ -593,7 +617,7 @@ function DocumentsStep({ data, setData, errors }) {
                                                 lineNumber: 134,
                                                 columnNumber: 21
                                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$file$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__FileIcon$3e$__["FileIcon"], {
-                                                className: "w-5 h-5 text-primary flex-shrink-0"
+                                                className: "w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/onboarding-steps/documents-step.tsx",
                                                 lineNumber: 142,
@@ -603,7 +627,7 @@ function DocumentsStep({ data, setData, errors }) {
                                                 className: "min-w-0 flex-1",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                        className: "font-medium text-foreground truncate",
+                                                        className: "text-xs sm:text-sm font-medium text-foreground truncate",
                                                         children: doc.name
                                                     }, void 0, false, {
                                                         fileName: "[project]/components/onboarding-steps/documents-step.tsx",
@@ -632,10 +656,10 @@ function DocumentsStep({ data, setData, errors }) {
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         onClick: ()=>removeDocument(doc.id),
-                                        className: "p-2 hover:bg-destructive/10 rounded-lg transition-colors flex-shrink-0 ml-2",
+                                        className: "p-1.5 sm:p-2 hover:bg-destructive/10 rounded-lg transition-colors flex-shrink-0 ml-2",
                                         "aria-label": "Remove document",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
-                                            className: "w-5 h-5 text-destructive"
+                                            className: "w-4 h-4 sm:w-5 sm:h-5 text-destructive"
                                         }, void 0, false, {
                                             fileName: "[project]/components/onboarding-steps/documents-step.tsx",
                                             lineNumber: 154,
@@ -730,12 +754,12 @@ function AuthorizedPersonsStep({ data, setData, errors }) {
         });
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "space-y-6",
+        className: "space-y-4 sm:space-y-6",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                        className: "text-2xl font-bold text-primary mb-2",
+                        className: "text-xl sm:text-2xl font-bold text-primary mb-1 sm:mb-2",
                         children: "Authorized Persons"
                     }, void 0, false, {
                         fileName: "[project]/components/onboarding-steps/authorized-persons-step.tsx",
@@ -743,7 +767,7 @@ function AuthorizedPersonsStep({ data, setData, errors }) {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "text-foreground/70",
+                        className: "text-xs sm:text-sm text-foreground/70",
                         children: "Add individuals authorized to manage donations and FX conversions"
                     }, void 0, false, {
                         fileName: "[project]/components/onboarding-steps/authorized-persons-step.tsx",
@@ -757,12 +781,12 @@ function AuthorizedPersonsStep({ data, setData, errors }) {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "space-y-4 p-6 bg-background rounded-lg border border-border",
+                className: "space-y-3 sm:space-y-4 p-4 sm:p-6 bg-background rounded-lg border border-border",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                className: "block text-sm font-medium text-foreground mb-2",
+                                className: "block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2",
                                 children: "Full Name"
                             }, void 0, false, {
                                 fileName: "[project]/components/onboarding-steps/authorized-persons-step.tsx",
@@ -777,7 +801,7 @@ function AuthorizedPersonsStep({ data, setData, errors }) {
                                         ...newPerson,
                                         fullName: e.target.value
                                     }),
-                                className: "w-full px-4 py-3 border border-border rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                                className: "w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border border-border rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
                             }, void 0, false, {
                                 fileName: "[project]/components/onboarding-steps/authorized-persons-step.tsx",
                                 lineNumber: 54,
@@ -790,12 +814,12 @@ function AuthorizedPersonsStep({ data, setData, errors }) {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "grid md:grid-cols-2 gap-4",
+                        className: "grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                        className: "block text-sm font-medium text-foreground mb-2",
+                                        className: "block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2",
                                         children: "Email"
                                     }, void 0, false, {
                                         fileName: "[project]/components/onboarding-steps/authorized-persons-step.tsx",
@@ -810,7 +834,7 @@ function AuthorizedPersonsStep({ data, setData, errors }) {
                                                 ...newPerson,
                                                 email: e.target.value
                                             }),
-                                        className: "w-full px-4 py-3 border border-border rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                                        className: "w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border border-border rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
                                     }, void 0, false, {
                                         fileName: "[project]/components/onboarding-steps/authorized-persons-step.tsx",
                                         lineNumber: 66,
@@ -825,7 +849,7 @@ function AuthorizedPersonsStep({ data, setData, errors }) {
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                        className: "block text-sm font-medium text-foreground mb-2",
+                                        className: "block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2",
                                         children: "Phone"
                                     }, void 0, false, {
                                         fileName: "[project]/components/onboarding-steps/authorized-persons-step.tsx",
@@ -840,7 +864,7 @@ function AuthorizedPersonsStep({ data, setData, errors }) {
                                                 ...newPerson,
                                                 phone: e.target.value
                                             }),
-                                        className: "w-full px-4 py-3 border border-border rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                                        className: "w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border border-border rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
                                     }, void 0, false, {
                                         fileName: "[project]/components/onboarding-steps/authorized-persons-step.tsx",
                                         lineNumber: 76,
@@ -861,7 +885,7 @@ function AuthorizedPersonsStep({ data, setData, errors }) {
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                className: "block text-sm font-medium text-foreground mb-2",
+                                className: "block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2",
                                 children: "Position/Role"
                             }, void 0, false, {
                                 fileName: "[project]/components/onboarding-steps/authorized-persons-step.tsx",
@@ -874,7 +898,7 @@ function AuthorizedPersonsStep({ data, setData, errors }) {
                                         ...newPerson,
                                         position: e.target.value
                                     }),
-                                className: "w-full px-4 py-3 border border-border rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all",
+                                className: "w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border border-border rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                         value: "",
@@ -939,7 +963,7 @@ function AuthorizedPersonsStep({ data, setData, errors }) {
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         onClick: addPerson,
                         disabled: !newPerson.fullName || !newPerson.email || !newPerson.position,
-                        className: "w-full flex items-center justify-center gap-2 py-3 border border-primary text-primary rounded-lg hover:bg-primary/5 disabled:opacity-50 disabled:cursor-not-allowed transition-colors",
+                        className: "w-full flex items-center justify-center gap-2 py-2.5 sm:py-3 border border-primary text-primary rounded-lg hover:bg-primary/5 disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-sm sm:text-base",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$plus$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Plus$3e$__["Plus"], {
                                 className: "w-4 h-4"
@@ -962,16 +986,22 @@ function AuthorizedPersonsStep({ data, setData, errors }) {
                 columnNumber: 7
             }, this),
             errors.authorized && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex items-center gap-2 p-4 bg-destructive/10 border border-destructive/30 rounded-lg text-destructive text-sm",
+                className: "flex items-center gap-2 p-3 sm:p-4 bg-destructive/10 border border-destructive/30 rounded-lg text-destructive text-xs sm:text-sm",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$alert$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__AlertCircle$3e$__["AlertCircle"], {
-                        className: "w-4 h-4 flex-shrink-0"
+                        className: "w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0"
                     }, void 0, false, {
                         fileName: "[project]/components/onboarding-steps/authorized-persons-step.tsx",
                         lineNumber: 114,
                         columnNumber: 11
                     }, this),
-                    errors.authorized
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        children: errors.authorized
+                    }, void 0, false, {
+                        fileName: "[project]/components/onboarding-steps/authorized-persons-step.tsx",
+                        lineNumber: 115,
+                        columnNumber: 11
+                    }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/onboarding-steps/authorized-persons-step.tsx",
@@ -981,7 +1011,7 @@ function AuthorizedPersonsStep({ data, setData, errors }) {
             data.authorizedPersons.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                        className: "font-medium text-foreground mb-3",
+                        className: "text-sm sm:text-base font-medium text-foreground mb-2 sm:mb-3",
                         children: "Added Persons"
                     }, void 0, false, {
                         fileName: "[project]/components/onboarding-steps/authorized-persons-step.tsx",
@@ -991,12 +1021,13 @@ function AuthorizedPersonsStep({ data, setData, errors }) {
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "space-y-2",
                         children: data.authorizedPersons.map((person)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "p-4 bg-background rounded-lg border border-border flex items-center justify-between",
+                                className: "p-3 sm:p-4 bg-background rounded-lg border border-border flex items-center justify-between gap-2 sm:gap-4",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "min-w-0 flex-1",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "font-medium text-foreground",
+                                                className: "text-sm sm:text-base font-medium text-foreground truncate",
                                                 children: person.fullName
                                             }, void 0, false, {
                                                 fileName: "[project]/components/onboarding-steps/authorized-persons-step.tsx",
@@ -1004,7 +1035,7 @@ function AuthorizedPersonsStep({ data, setData, errors }) {
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: "text-sm text-foreground/70",
+                                                className: "text-xs sm:text-sm text-foreground/70 truncate",
                                                 children: [
                                                     person.position,
                                                     " • ",
@@ -1023,9 +1054,9 @@ function AuthorizedPersonsStep({ data, setData, errors }) {
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         onClick: ()=>removePerson(person.id),
-                                        className: "p-2 hover:bg-destructive/10 rounded-lg transition-colors",
+                                        className: "p-1.5 sm:p-2 hover:bg-destructive/10 rounded-lg transition-colors flex-shrink-0",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__["X"], {
-                                            className: "w-5 h-5 text-destructive"
+                                            className: "w-4 h-4 sm:w-5 sm:h-5 text-destructive"
                                         }, void 0, false, {
                                             fileName: "[project]/components/onboarding-steps/authorized-persons-step.tsx",
                                             lineNumber: 133,
@@ -1082,12 +1113,12 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 ;
 function ReviewStep({ data }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "space-y-6",
+        className: "space-y-4 sm:space-y-6",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                        className: "text-2xl font-bold text-primary mb-2",
+                        className: "text-xl sm:text-2xl font-bold text-primary mb-1 sm:mb-2",
                         children: "Review Your Information"
                     }, void 0, false, {
                         fileName: "[project]/components/onboarding-steps/review-step.tsx",
@@ -1095,7 +1126,7 @@ function ReviewStep({ data }) {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                        className: "text-foreground/70",
+                        className: "text-xs sm:text-sm text-foreground/70",
                         children: "Please verify all details before submitting"
                     }, void 0, false, {
                         fileName: "[project]/components/onboarding-steps/review-step.tsx",
@@ -1109,13 +1140,13 @@ function ReviewStep({ data }) {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "p-6 bg-background rounded-lg border border-border space-y-4",
+                className: "p-4 sm:p-6 bg-background rounded-lg border border-border space-y-3 sm:space-y-4",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                        className: "font-semibold text-foreground flex items-center gap-2",
+                        className: "text-sm sm:text-base font-semibold text-foreground flex items-center gap-2",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$check$2d$big$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__CheckCircle$3e$__["CheckCircle"], {
-                                className: "w-5 h-5 text-primary"
+                                className: "w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0"
                             }, void 0, false, {
                                 fileName: "[project]/components/onboarding-steps/review-step.tsx",
                                 lineNumber: 20,
@@ -1129,12 +1160,12 @@ function ReviewStep({ data }) {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "grid md:grid-cols-2 gap-4 text-sm",
+                        className: "grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 text-xs sm:text-sm",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-foreground/70",
+                                        className: "text-foreground/70 mb-1",
                                         children: "Organization Name"
                                     }, void 0, false, {
                                         fileName: "[project]/components/onboarding-steps/review-step.tsx",
@@ -1142,7 +1173,7 @@ function ReviewStep({ data }) {
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "font-medium text-foreground",
+                                        className: "font-medium text-foreground break-words",
                                         children: data.orgName
                                     }, void 0, false, {
                                         fileName: "[project]/components/onboarding-steps/review-step.tsx",
@@ -1158,7 +1189,7 @@ function ReviewStep({ data }) {
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-foreground/70",
+                                        className: "text-foreground/70 mb-1",
                                         children: "CAC Certificate"
                                     }, void 0, false, {
                                         fileName: "[project]/components/onboarding-steps/review-step.tsx",
@@ -1166,7 +1197,7 @@ function ReviewStep({ data }) {
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "font-medium text-foreground",
+                                        className: "font-medium text-foreground break-words",
                                         children: data.cacCertificate
                                     }, void 0, false, {
                                         fileName: "[project]/components/onboarding-steps/review-step.tsx",
@@ -1182,7 +1213,7 @@ function ReviewStep({ data }) {
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-foreground/70",
+                                        className: "text-foreground/70 mb-1",
                                         children: "TIN"
                                     }, void 0, false, {
                                         fileName: "[project]/components/onboarding-steps/review-step.tsx",
@@ -1190,7 +1221,7 @@ function ReviewStep({ data }) {
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "font-medium text-foreground",
+                                        className: "font-medium text-foreground break-words",
                                         children: data.tin
                                     }, void 0, false, {
                                         fileName: "[project]/components/onboarding-steps/review-step.tsx",
@@ -1216,13 +1247,13 @@ function ReviewStep({ data }) {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "p-6 bg-background rounded-lg border border-border space-y-4",
+                className: "p-4 sm:p-6 bg-background rounded-lg border border-border space-y-3 sm:space-y-4",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                        className: "font-semibold text-foreground flex items-center gap-2",
+                        className: "text-sm sm:text-base font-semibold text-foreground flex items-center gap-2",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$check$2d$big$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__CheckCircle$3e$__["CheckCircle"], {
-                                className: "w-5 h-5 text-primary"
+                                className: "w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0"
                             }, void 0, false, {
                                 fileName: "[project]/components/onboarding-steps/review-step.tsx",
                                 lineNumber: 42,
@@ -1238,9 +1269,9 @@ function ReviewStep({ data }) {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "space-y-2",
+                        className: "space-y-1 sm:space-y-2",
                         children: data.documents.map((doc)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "text-sm text-foreground/70",
+                                className: "text-xs sm:text-sm text-foreground/70 truncate",
                                 children: [
                                     "• ",
                                     doc.name
@@ -1262,13 +1293,13 @@ function ReviewStep({ data }) {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "p-6 bg-background rounded-lg border border-border space-y-4",
+                className: "p-4 sm:p-6 bg-background rounded-lg border border-border space-y-3 sm:space-y-4",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                        className: "font-semibold text-foreground flex items-center gap-2",
+                        className: "text-sm sm:text-base font-semibold text-foreground flex items-center gap-2",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$check$2d$big$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__CheckCircle$3e$__["CheckCircle"], {
-                                className: "w-5 h-5 text-primary"
+                                className: "w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0"
                             }, void 0, false, {
                                 fileName: "[project]/components/onboarding-steps/review-step.tsx",
                                 lineNumber: 57,
@@ -1284,12 +1315,12 @@ function ReviewStep({ data }) {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "space-y-3",
+                        className: "space-y-2 sm:space-y-3",
                         children: data.authorizedPersons.map((person)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "text-sm",
+                                className: "text-xs sm:text-sm",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "font-medium text-foreground",
+                                        className: "font-medium text-foreground truncate",
                                         children: person.fullName
                                     }, void 0, false, {
                                         fileName: "[project]/components/onboarding-steps/review-step.tsx",
@@ -1297,7 +1328,7 @@ function ReviewStep({ data }) {
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-foreground/70",
+                                        className: "text-foreground/70 truncate",
                                         children: person.position
                                     }, void 0, false, {
                                         fileName: "[project]/components/onboarding-steps/review-step.tsx",
@@ -1305,7 +1336,7 @@ function ReviewStep({ data }) {
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-foreground/70",
+                                        className: "text-foreground/70 truncate",
                                         children: person.email
                                     }, void 0, false, {
                                         fileName: "[project]/components/onboarding-steps/review-step.tsx",
@@ -1330,9 +1361,9 @@ function ReviewStep({ data }) {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "p-4 bg-primary/10 border border-primary/30 rounded-lg",
+                className: "p-3 sm:p-4 bg-primary/10 border border-primary/30 rounded-lg",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-sm text-foreground",
+                    className: "text-xs sm:text-sm text-foreground leading-relaxed",
                     children: "By submitting this form, you confirm that all information is accurate and complete. Our compliance team will review your registration within 24-48 hours."
                 }, void 0, false, {
                     fileName: "[project]/components/onboarding-steps/review-step.tsx",
@@ -1430,10 +1461,10 @@ function OnboardingForm({ currentStep, onStepComplete, totalSteps }) {
         }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "space-y-8",
+        className: "space-y-6 sm:space-y-8",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "bg-white rounded-lg border border-border p-8 min-h-96",
+                className: "bg-white rounded-lg border border-border p-4 sm:p-6 lg:p-8 min-h-64 sm:min-h-96",
                 children: [
                     currentStep === 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$onboarding$2d$steps$2f$org$2d$details$2d$step$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         data: formData,
@@ -1476,12 +1507,12 @@ function OnboardingForm({ currentStep, onStepComplete, totalSteps }) {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex justify-between",
+                className: "flex flex-col-reverse sm:flex-row justify-between gap-3 sm:gap-0",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         onClick: handlePrevStep,
                         disabled: currentStep === 1,
-                        className: "flex items-center gap-2 px-6 py-3 rounded-lg border border-border text-foreground hover:bg-background disabled:opacity-50 disabled:cursor-not-allowed transition-colors",
+                        className: "flex items-center justify-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg border border-border text-foreground hover:bg-background disabled:opacity-50 disabled:cursor-not-allowed transition-colors text-sm sm:text-base w-full sm:w-auto",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$left$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowLeft$3e$__["ArrowLeft"], {
                                 className: "w-4 h-4"
@@ -1500,7 +1531,7 @@ function OnboardingForm({ currentStep, onStepComplete, totalSteps }) {
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         onClick: handleNextStep,
                         disabled: isLoading,
-                        className: "flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 disabled:opacity-50 transition-all transform hover:scale-105",
+                        className: "flex items-center justify-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 disabled:opacity-50 transition-all transform hover:scale-105 text-sm sm:text-base w-full sm:w-auto",
                         children: [
                             isLoading ? 'Processing...' : currentStep === totalSteps ? 'Submit Registration' : 'Next Step',
                             !isLoading && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__["ArrowRight"], {
@@ -1560,7 +1591,7 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
-function RegisterPage() {
+function RegisterPageContent() {
     _s();
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
     const searchParams = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useSearchParams"])();
@@ -1568,28 +1599,25 @@ function RegisterPage() {
     const [showSuccess, setShowSuccess] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const totalSteps = 4;
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "RegisterPage.useEffect": ()=>{
-            // Check if coming from successful registration
+        "RegisterPageContent.useEffect": ()=>{
             if (searchParams.get('success') === 'true') {
                 setShowSuccess(true);
-                // Auto-redirect after 3 seconds
                 const timer = setTimeout({
-                    "RegisterPage.useEffect.timer": ()=>{
+                    "RegisterPageContent.useEffect.timer": ()=>{
                         router.push('/dashboard?fromRegistration=true');
                     }
-                }["RegisterPage.useEffect.timer"], 3000);
+                }["RegisterPageContent.useEffect.timer"], 3000);
                 return ({
-                    "RegisterPage.useEffect": ()=>clearTimeout(timer)
-                })["RegisterPage.useEffect"];
+                    "RegisterPageContent.useEffect": ()=>clearTimeout(timer)
+                })["RegisterPageContent.useEffect"];
             }
         }
-    }["RegisterPage.useEffect"], [
+    }["RegisterPageContent.useEffect"], [
         searchParams,
         router
     ]);
     const handleStepComplete = (nextStep)=>{
         if (nextStep > totalSteps) {
-            // Show success message before redirecting
             router.push('/auth/register?success=true');
         } else {
             setCurrentStep(nextStep);
@@ -1609,12 +1637,12 @@ function RegisterPage() {
                                 className: "w-10 h-10 text-primary"
                             }, void 0, false, {
                                 fileName: "[project]/app/auth/register/page.tsx",
-                                lineNumber: 43,
+                                lineNumber: 40,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/auth/register/page.tsx",
-                            lineNumber: 42,
+                            lineNumber: 39,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1624,7 +1652,7 @@ function RegisterPage() {
                                     children: "Registration Successful!"
                                 }, void 0, false, {
                                     fileName: "[project]/app/auth/register/page.tsx",
-                                    lineNumber: 46,
+                                    lineNumber: 43,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1632,7 +1660,7 @@ function RegisterPage() {
                                     children: "Your NGO registration has been submitted successfully. Our compliance team will review your application within 24-48 hours."
                                 }, void 0, false, {
                                     fileName: "[project]/app/auth/register/page.tsx",
-                                    lineNumber: 47,
+                                    lineNumber: 44,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1640,13 +1668,13 @@ function RegisterPage() {
                                     children: "Redirecting to dashboard..."
                                 }, void 0, false, {
                                     fileName: "[project]/app/auth/register/page.tsx",
-                                    lineNumber: 50,
+                                    lineNumber: 47,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/auth/register/page.tsx",
-                            lineNumber: 45,
+                            lineNumber: 42,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -1659,34 +1687,34 @@ function RegisterPage() {
                                         className: "w-4 h-4"
                                     }, void 0, false, {
                                         fileName: "[project]/app/auth/register/page.tsx",
-                                        lineNumber: 57,
+                                        lineNumber: 54,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/auth/register/page.tsx",
-                                lineNumber: 55,
+                                lineNumber: 52,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/auth/register/page.tsx",
-                            lineNumber: 54,
+                            lineNumber: 51,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/auth/register/page.tsx",
-                    lineNumber: 41,
+                    lineNumber: 38,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/auth/register/page.tsx",
-                lineNumber: 40,
+                lineNumber: 37,
                 columnNumber: 9
             }, this)
         }, void 0, false, {
             fileName: "[project]/app/auth/register/page.tsx",
-            lineNumber: 39,
+            lineNumber: 36,
             columnNumber: 7
         }, this);
     }
@@ -1696,42 +1724,42 @@ function RegisterPage() {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "bg-white border-b border-border sticky top-0 z-40",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "max-w-4xl mx-auto px-6 py-6",
+                    className: "max-w-4xl mx-auto px-4 sm:px-6 py-4 sm:py-6",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                            className: "text-2xl font-bold text-primary mb-2",
+                            className: "text-xl sm:text-2xl font-bold text-primary mb-1 sm:mb-2",
                             children: "NGO Registration"
                         }, void 0, false, {
                             fileName: "[project]/app/auth/register/page.tsx",
-                            lineNumber: 70,
+                            lineNumber: 67,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "text-foreground/70",
+                            className: "text-xs sm:text-sm text-foreground/70",
                             children: "Complete your KYC verification to start receiving donations"
                         }, void 0, false, {
                             fileName: "[project]/app/auth/register/page.tsx",
-                            lineNumber: 71,
+                            lineNumber: 68,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/auth/register/page.tsx",
-                    lineNumber: 69,
+                    lineNumber: 66,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/auth/register/page.tsx",
-                lineNumber: 68,
+                lineNumber: 65,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "bg-white border-b border-border",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "max-w-4xl mx-auto px-6 py-8",
+                    className: "max-w-4xl mx-auto px-4 sm:px-6 py-4 sm:py-6 lg:py-8",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex items-center justify-between",
+                            className: "flex items-center justify-between gap-1 sm:gap-2",
                             children: Array.from({
                                 length: totalSteps
                             }).map((_, idx)=>{
@@ -1739,50 +1767,50 @@ function RegisterPage() {
                                 const isCompleted = stepNum < currentStep;
                                 const isCurrent = stepNum === currentStep;
                                 return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "flex items-center flex-1",
+                                    className: "flex items-center flex-1 min-w-0",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: `
-                    w-10 h-10 rounded-full flex items-center justify-center font-semibold
-                    transition-all duration-300
-                    ${isCompleted ? 'bg-primary text-primary-foreground' : isCurrent ? 'bg-primary text-primary-foreground ring-4 ring-primary/20' : 'bg-gray-100 text-foreground'}
+                    w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-semibold text-xs sm:text-sm
+                    transition-all duration-300 flex-shrink-0
+                    ${isCompleted ? 'bg-primary text-primary-foreground' : isCurrent ? 'bg-primary text-primary-foreground ring-2 sm:ring-4 ring-primary/20' : 'bg-gray-100 text-foreground'}
                   `,
                                             children: isCompleted ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$check$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Check$3e$__["Check"], {
-                                                className: "w-5 h-5"
+                                                className: "w-4 h-4 sm:w-5 sm:h-5"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/auth/register/page.tsx",
-                                                lineNumber: 94,
+                                                lineNumber: 91,
                                                 columnNumber: 36
                                             }, this) : stepNum
                                         }, void 0, false, {
                                             fileName: "[project]/app/auth/register/page.tsx",
-                                            lineNumber: 84,
+                                            lineNumber: 81,
                                             columnNumber: 19
                                         }, this),
                                         idx < totalSteps - 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: `
-                      flex-1 h-1 mx-2 rounded-full transition-all duration-300
+                      flex-1 h-0.5 sm:h-1 mx-1 sm:mx-2 rounded-full transition-all duration-300
                       ${stepNum < currentStep ? 'bg-primary' : 'bg-border'}
                     `
                                         }, void 0, false, {
                                             fileName: "[project]/app/auth/register/page.tsx",
-                                            lineNumber: 97,
+                                            lineNumber: 94,
                                             columnNumber: 21
                                         }, this)
                                     ]
                                 }, idx, true, {
                                     fileName: "[project]/app/auth/register/page.tsx",
-                                    lineNumber: 83,
+                                    lineNumber: 80,
                                     columnNumber: 17
                                 }, this);
                             })
                         }, void 0, false, {
                             fileName: "[project]/app/auth/register/page.tsx",
-                            lineNumber: 76,
+                            lineNumber: 73,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "text-center text-foreground/70 mt-4 text-sm",
+                            className: "text-center text-foreground/70 mt-3 sm:mt-4 text-xs sm:text-sm",
                             children: [
                                 "Step ",
                                 currentStep,
@@ -1791,52 +1819,98 @@ function RegisterPage() {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/auth/register/page.tsx",
-                            lineNumber: 106,
+                            lineNumber: 103,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/auth/register/page.tsx",
-                    lineNumber: 75,
+                    lineNumber: 72,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/auth/register/page.tsx",
-                lineNumber: 74,
+                lineNumber: 71,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "max-w-4xl mx-auto px-6 py-12",
+                className: "max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$onboarding$2d$form$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                     currentStep: currentStep,
                     onStepComplete: handleStepComplete,
                     totalSteps: totalSteps
                 }, void 0, false, {
                     fileName: "[project]/app/auth/register/page.tsx",
-                    lineNumber: 114,
+                    lineNumber: 111,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/app/auth/register/page.tsx",
-                lineNumber: 113,
+                lineNumber: 110,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/auth/register/page.tsx",
-        lineNumber: 67,
+        lineNumber: 64,
         columnNumber: 5
     }, this);
 }
-_s(RegisterPage, "4nTgjO/T7laMOQQ+POu3fxMYieA=", false, function() {
+_s(RegisterPageContent, "4nTgjO/T7laMOQQ+POu3fxMYieA=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useSearchParams"]
     ];
 });
-_c = RegisterPage;
-var _c;
-__turbopack_context__.k.register(_c, "RegisterPage");
+_c = RegisterPageContent;
+function RegisterPage() {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Suspense"], {
+        fallback: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
+            className: "min-h-screen bg-background flex items-center justify-center",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "text-center",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto"
+                    }, void 0, false, {
+                        fileName: "[project]/app/auth/register/page.tsx",
+                        lineNumber: 126,
+                        columnNumber: 11
+                    }, void 0),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "mt-4 text-muted-foreground",
+                        children: "Loading..."
+                    }, void 0, false, {
+                        fileName: "[project]/app/auth/register/page.tsx",
+                        lineNumber: 127,
+                        columnNumber: 11
+                    }, void 0)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/app/auth/register/page.tsx",
+                lineNumber: 125,
+                columnNumber: 9
+            }, void 0)
+        }, void 0, false, {
+            fileName: "[project]/app/auth/register/page.tsx",
+            lineNumber: 124,
+            columnNumber: 7
+        }, void 0),
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(RegisterPageContent, {}, void 0, false, {
+            fileName: "[project]/app/auth/register/page.tsx",
+            lineNumber: 131,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/app/auth/register/page.tsx",
+        lineNumber: 123,
+        columnNumber: 5
+    }, this);
+}
+_c1 = RegisterPage;
+var _c, _c1;
+__turbopack_context__.k.register(_c, "RegisterPageContent");
+__turbopack_context__.k.register(_c1, "RegisterPage");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }

@@ -15,7 +15,7 @@ export default function DashboardSidebar() {
     { href: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
     { href: '/dashboard/convert', label: 'Convert Now', icon: ArrowRightLeft },
     { href: '/dashboard/wallets', label: 'Wallets', icon: Wallet },
-    { href: '/dashboard/reports', label: 'Audit Reports', icon: FileText },
+    // { href: '/dashboard/reports', label: 'Audit Reports', icon: FileText },
     { href: '/dashboard/settings', label: 'Settings', icon: Settings },
     { href: '/dashboard/compliance', label: 'Compliance', icon: FileText }
   ]

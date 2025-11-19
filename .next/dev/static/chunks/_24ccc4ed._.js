@@ -42,17 +42,17 @@ function LoginPage() {
         setIsLoading(false);
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
-        className: "min-h-screen bg-background flex items-center justify-center px-6",
+        className: "min-h-screen bg-background flex items-center justify-center px-4 sm:px-6 py-8 sm:py-12",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "w-full max-w-md",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "text-center mb-8",
+                    className: "text-center mb-6 sm:mb-8",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "w-12 h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4",
+                            className: "w-10 h-10 sm:w-12 sm:h-12 bg-primary rounded-lg flex items-center justify-center mx-auto mb-3 sm:mb-4",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "text-xl font-bold text-primary-foreground",
+                                className: "text-lg sm:text-xl font-bold text-primary-foreground",
                                 children: "N"
                             }, void 0, false, {
                                 fileName: "[project]/app/auth/login/page.tsx",
@@ -65,7 +65,7 @@ function LoginPage() {
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                            className: "text-3xl font-bold text-primary mb-2",
+                            className: "text-2xl sm:text-3xl font-bold text-primary mb-1 sm:mb-2",
                             children: "Naira Bridge"
                         }, void 0, false, {
                             fileName: "[project]/app/auth/login/page.tsx",
@@ -73,7 +73,7 @@ function LoginPage() {
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "text-foreground/70",
+                            className: "text-sm sm:text-base text-foreground/70",
                             children: "Secure international payment platform"
                         }, void 0, false, {
                             fileName: "[project]/app/auth/login/page.tsx",
@@ -87,12 +87,12 @@ function LoginPage() {
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "bg-white rounded-lg border border-border p-8 space-y-6",
+                    className: "bg-white rounded-lg border border-border p-6 sm:p-8 space-y-5 sm:space-y-6",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                    className: "text-2xl font-bold text-primary mb-1",
+                                    className: "text-xl sm:text-2xl font-bold text-primary mb-1",
                                     children: "Welcome Back"
                                 }, void 0, false, {
                                     fileName: "[project]/app/auth/login/page.tsx",
@@ -100,7 +100,7 @@ function LoginPage() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "text-foreground/70",
+                                    className: "text-sm sm:text-base text-foreground/70",
                                     children: "Sign in to your account"
                                 }, void 0, false, {
                                     fileName: "[project]/app/auth/login/page.tsx",
@@ -120,7 +120,7 @@ function LoginPage() {
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                            className: "block text-sm font-medium text-foreground mb-2",
+                                            className: "block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2",
                                             children: "Email Address"
                                         }, void 0, false, {
                                             fileName: "[project]/app/auth/login/page.tsx",
@@ -132,7 +132,7 @@ function LoginPage() {
                                             placeholder: "you@example.com",
                                             value: email,
                                             onChange: (e)=>setEmail(e.target.value),
-                                            className: "w-full px-4 py-3 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                                            className: "w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
                                         }, void 0, false, {
                                             fileName: "[project]/app/auth/login/page.tsx",
                                             lineNumber: 55,
@@ -147,7 +147,7 @@ function LoginPage() {
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                            className: "block text-sm font-medium text-foreground mb-2",
+                                            className: "block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2",
                                             children: "Password"
                                         }, void 0, false, {
                                             fileName: "[project]/app/auth/login/page.tsx",
@@ -162,7 +162,7 @@ function LoginPage() {
                                                     placeholder: "Enter your password",
                                                     value: password,
                                                     onChange: (e)=>setPassword(e.target.value),
-                                                    className: "w-full px-4 py-3 border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
+                                                    className: "w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border border-border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all pr-10 sm:pr-12"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/auth/login/page.tsx",
                                                     lineNumber: 67,
@@ -173,17 +173,17 @@ function LoginPage() {
                                                     onClick: ()=>setShowPassword(!showPassword),
                                                     className: "absolute right-3 top-1/2 -translate-y-1/2 text-foreground/50 hover:text-foreground",
                                                     children: showPassword ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$eye$2d$off$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__EyeOff$3e$__["EyeOff"], {
-                                                        className: "w-5 h-5"
+                                                        className: "w-4 h-4 sm:w-5 sm:h-5"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/auth/login/page.tsx",
                                                         lineNumber: 79,
                                                         columnNumber: 35
                                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$eye$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Eye$3e$__["Eye"], {
-                                                        className: "w-5 h-5"
+                                                        className: "w-4 h-4 sm:w-5 sm:h-5"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/auth/login/page.tsx",
                                                         lineNumber: 79,
-                                                        columnNumber: 68
+                                                        columnNumber: 82
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/auth/login/page.tsx",
@@ -203,20 +203,26 @@ function LoginPage() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "flex items-center justify-between",
+                                    className: "flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-0",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                            className: "flex items-center gap-2 text-sm text-foreground/70",
+                                            className: "flex items-center gap-2 text-xs sm:text-sm text-foreground/70",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
                                                     type: "checkbox",
-                                                    className: "rounded border-border"
+                                                    className: "rounded border-border w-3 h-3 sm:w-4 sm:h-4"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/auth/login/page.tsx",
                                                     lineNumber: 86,
                                                     columnNumber: 17
                                                 }, this),
-                                                "Remember me"
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    children: "Remember me"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/auth/login/page.tsx",
+                                                    lineNumber: 87,
+                                                    columnNumber: 17
+                                                }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/auth/login/page.tsx",
@@ -225,7 +231,7 @@ function LoginPage() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                             href: "/auth/forgot-password",
-                                            className: "text-sm text-primary hover:underline font-medium",
+                                            className: "text-xs sm:text-sm text-primary hover:underline font-medium",
                                             children: "Forgot Password?"
                                         }, void 0, false, {
                                             fileName: "[project]/app/auth/login/page.tsx",
@@ -239,7 +245,7 @@ function LoginPage() {
                                     columnNumber: 13
                                 }, this),
                                 error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "p-3 bg-destructive/10 border border-destructive/30 rounded-lg text-destructive text-sm",
+                                    className: "p-2.5 sm:p-3 bg-destructive/10 border border-destructive/30 rounded-lg text-destructive text-xs sm:text-sm",
                                     children: error
                                 }, void 0, false, {
                                     fileName: "[project]/app/auth/login/page.tsx",
@@ -249,7 +255,7 @@ function LoginPage() {
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                     type: "submit",
                                     disabled: isLoading,
-                                    className: "w-full flex items-center justify-center gap-2 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 disabled:opacity-50 transition-all font-medium",
+                                    className: "w-full flex items-center justify-center gap-2 py-2.5 sm:py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 disabled:opacity-50 transition-all font-medium text-sm sm:text-base",
                                     children: [
                                         isLoading ? 'Signing in...' : 'Sign In',
                                         !isLoading && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__["ArrowRight"], {
@@ -272,9 +278,9 @@ function LoginPage() {
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "pt-4 border-t border-border",
+                            className: "pt-3 sm:pt-4 border-t border-border",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-center text-foreground/70 text-sm",
+                                className: "text-center text-foreground/70 text-xs sm:text-sm",
                                 children: [
                                     "Don't have an account?",
                                     ' ',
