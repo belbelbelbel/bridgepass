@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/support/layout,_N_T_/support/chat/layout,_N_T_/support/chat/page,_N_T_/support/chat"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/support/chat/__PAGE__",
+    "/support/chat",
+    "/support",
+    "/_index",
+    "/_head"
+  ]
+}

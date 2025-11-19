@@ -1,12 +1,12 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { ArrowRight, Check, CheckCircle2 } from 'lucide-react'
 import OnboardingForm from '@/components/onboarding-form'
 import Link from 'next/link'
 
-export default function RegisterPage() {
+function RegisterPageContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const [currentStep, setCurrentStep] = useState(1)
@@ -88,7 +88,7 @@ export default function RegisterPage() {
                       ? 'bg-primary text-primary-foreground' 
                       : isCurrent 
                       ? 'bg-primary text-primary-foreground ring-4 ring-primary/20' 
-                      : 'bg-secondary text-foreground'
+                      : 'bg-gray-100 text-foreground'
                     }
                   `}>
                     {isCompleted ? <Check className="w-5 h-5" /> : stepNum}
@@ -118,5 +118,20 @@ export default function RegisterPage() {
         />
       </div>
     </main>
+  )
+}
+
+export default function RegisterPage() {
+  return (
+    <Suspense fallback={
+      <main className="min-h-screen bg-background flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto"></div>
+          <p className="mt-4 text-muted-foreground">Loading...</p>
+        </div>
+      </main>
+    }>
+      <RegisterPageContent />
+    </Suspense>
   )
 }

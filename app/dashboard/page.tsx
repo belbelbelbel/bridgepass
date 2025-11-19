@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { X, CheckCircle2, Sparkles } from 'lucide-react'
@@ -12,7 +12,7 @@ import ConversionChart from '@/components/dashboard/conversion-chart'
 import RecentConversions from '@/components/dashboard/recent-conversions'
 import { useSearchParams } from 'next/navigation'
 
-export default function Dashboard() {
+function DashboardContent() {
   const searchParams = useSearchParams()
   const [showWelcome, setShowWelcome] = useState(false)
 
@@ -140,5 +140,26 @@ export default function Dashboard() {
         </main>
       </div>
     </div>
+  )
+}
+
+export default function Dashboard() {
+  return (
+    <Suspense fallback={
+      <div className="flex h-screen bg-background">
+        <DashboardSidebar />
+        <div className="flex-1 flex flex-col overflow-hidden">
+          <TopNav />
+          <main className="flex-1 overflow-auto flex items-center justify-center">
+            <div className="text-center">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto"></div>
+              <p className="mt-4 text-muted-foreground">Loading...</p>
+            </div>
+          </main>
+        </div>
+      </div>
+    }>
+      <DashboardContent />
+    </Suspense>
   )
 }

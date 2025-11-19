@@ -58,23 +58,21 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-full h-[70vh] px-4 sm:px-6 lg:px-8 bg-white flex items-center justify-center">
-        <div className="w-full max-w-5xl mx-auto text-center flex flex-col items-center justify-center space-y-8">
-          <h1 className="text-5xl md:text-6xl font-bold text-black leading-tight">
+      <section className="pt-32 pb-20 px-6 bg-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-5xl font-bold text-primary mb-6 leading-tight">
             Secure International Payments for NGOs
           </h1>
-          <p className="text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-foreground/70 mb-8 leading-relaxed">
             Receive donations in multiple currencies, lock competitive FX rates, and convert to NGN with complete transparency. Built for trust, compliance, and simplicity.
           </p>
-          <div className="pt-2">
-            <Link 
-              href="/auth/register" 
-              className="inline-flex items-center gap-2 px-8 py-4 bg-black text-white rounded-lg font-semibold hover:bg-gray-800 transition-colors"
-            >
-              Start Your NGO Registration
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-          </div>
+          <Link 
+            href="/auth/register" 
+            className="inline-flex cursor-pointer items-center gap-2 px-6 py-4 text-md bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-all transform hover:scale-105"
+          >
+            Start Your NGO Registration
+            <ArrowRight className="w-5 h-5" />
+          </Link>
         </div>
       </section>
       

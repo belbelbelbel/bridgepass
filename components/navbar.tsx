@@ -13,7 +13,7 @@ export default function Navbar() {
       e.preventDefault()
       const element = document.querySelector(href)
       if (element) {
-        const offset = 80 // Account for sticky navbar height
+        const offset = 80 
         const elementPosition = element.getBoundingClientRect().top
         const offsetPosition = elementPosition + window.pageYOffset - offset
 
@@ -90,13 +90,25 @@ export default function Navbar() {
         {isOpen && (
           <div className="md:hidden pb-4 border-t border-border">
             <div className="flex flex-col gap-2 pt-4">
-              <Link href="#how-it-works" className="px-4 py-2 text-muted-foreground hover:text-foreground">
+              <Link 
+                href="#how-it-works" 
+                onClick={(e) => handleSmoothScroll(e, '#how-it-works')}
+                className="px-4 py-2 text-muted-foreground hover:text-foreground"
+              >
                 How it Works
               </Link>
-              <Link href="#features" className="px-4 py-2 text-muted-foreground hover:text-foreground">
+              <Link 
+                href="#features" 
+                onClick={(e) => handleSmoothScroll(e, '#features')}
+                className="px-4 py-2 text-muted-foreground hover:text-foreground"
+              >
                 Features
               </Link>
-              <Link href="#pricing" className="px-4 py-2 text-muted-foreground hover:text-foreground">
+              <Link 
+                href="#pricing" 
+                onClick={(e) => handleSmoothScroll(e, '#pricing')}
+                className="px-4 py-2 text-muted-foreground hover:text-foreground"
+              >
                 Pricing
               </Link>
               <div className="px-4 pt-4 flex flex-col gap-2">

@@ -40,6 +40,24 @@
       "namedRegex": "^/_not\\-found(?:/)?$"
     },
     {
+      "page": "/auth/forgot-password",
+      "regex": "^/auth/forgot\\-password(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/auth/forgot\\-password(?:/)?$"
+    },
+    {
+      "page": "/auth/login",
+      "regex": "^/auth/login(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/auth/login(?:/)?$"
+    },
+    {
+      "page": "/auth/register",
+      "regex": "^/auth/register(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/auth/register(?:/)?$"
+    },
+    {
       "page": "/dashboard",
       "regex": "^/dashboard(?:/)?$",
       "routeKeys": {},
@@ -70,10 +88,22 @@
       "namedRegex": "^/dashboard/wallets(?:/)?$"
     },
     {
-      "page": "/login",
-      "regex": "^/login(?:/)?$",
+      "page": "/support",
+      "regex": "^/support(?:/)?$",
       "routeKeys": {},
-      "namedRegex": "^/login(?:/)?$"
+      "namedRegex": "^/support(?:/)?$"
+    },
+    {
+      "page": "/support/chat",
+      "regex": "^/support/chat(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/support/chat(?:/)?$"
+    },
+    {
+      "page": "/support/tickets/new",
+      "regex": "^/support/tickets/new(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/support/tickets/new(?:/)?$"
     }
   ],
   "dataRoutes": [],
