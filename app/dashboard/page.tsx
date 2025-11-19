@@ -39,27 +39,27 @@ function DashboardContent() {
         <TopNav />
         
         <main className="flex-1 overflow-auto">
-          <div className="p-8 space-y-8">
+          <div className="p-4 sm:p-6 lg:p-8 space-y-6 sm:space-y-8">
             {/* Welcome Banner */}
             {showWelcome && (
-              <div className="bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 rounded-lg p-6 relative">
+              <div className="bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 rounded-lg p-4 sm:p-6 relative">
                 <button
                   onClick={dismissWelcome}
-                  className="absolute top-4 right-4 text-foreground/50 hover:text-foreground transition-colors"
+                  className="absolute top-3 right-3 sm:top-4 sm:right-4 text-foreground/50 hover:text-foreground transition-colors"
                   aria-label="Dismiss welcome message"
                 >
-                  <X className="w-5 h-5" />
+                  <X className="w-4 h-4 sm:w-5 sm:h-5" />
                 </button>
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Sparkles className="w-6 h-6 text-primary" />
+                <div className="flex items-start gap-3 sm:gap-4 pr-8">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-foreground mb-2 flex items-center gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-primary" />
-                      Welcome to Naira Bridge!
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-base sm:text-lg font-semibold text-foreground mb-2 flex items-center gap-2">
+                      <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" />
+                      <span>Welcome to Naira Bridge!</span>
                     </h3>
-                    <p className="text-foreground/70 mb-3">
+                    <p className="text-sm sm:text-base text-foreground/70 mb-3">
                       {searchParams.get('fromRegistration') === 'true' 
                         ? "Your registration is being reviewed. You can explore the dashboard while we verify your organization details. We'll notify you once your account is fully activated."
                         : "Get started by converting your first donation, managing wallets, or exploring audit reports. Need help? Check out the quick actions below or contact support."}
@@ -83,49 +83,49 @@ function DashboardContent() {
 
             {/* Page Header */}
             <div>
-              <h1 className="text-3xl font-bold mb-2">Dashboard</h1>
-              <p className="text-muted-foreground">Welcome back! Here's your conversion overview.</p>
+              <h1 className="text-2xl sm:text-3xl font-bold mb-1 sm:mb-2">Dashboard</h1>
+              <p className="text-sm sm:text-base text-muted-foreground">Welcome back! Here's your conversion overview.</p>
             </div>
 
             {/* Analytics Cards */}
             <AnalyticsCards />
 
             {/* Charts and Data */}
-            <div className="grid lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
               <div className="lg:col-span-2">
                 <ConversionChart />
               </div>
               
-              <div className="space-y-4">
+              <div className="space-y-4 sm:space-y-6">
                 <Card className="bg-accent/5 border-accent/20">
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-lg">Compliance Status</CardTitle>
+                  <CardHeader className="pb-2 sm:pb-3 p-4 sm:p-6">
+                    <CardTitle className="text-base sm:text-lg">Compliance Status</CardTitle>
                   </CardHeader>
-                  <CardContent>
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                      <span className="text-sm font-medium">All Verified</span>
+                  <CardContent className="p-4 sm:p-6 pt-0">
+                    <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+                      <div className="w-2 h-2 sm:w-3 sm:h-3 bg-green-500 rounded-full flex-shrink-0"></div>
+                      <span className="text-xs sm:text-sm font-medium">All Verified</span>
                     </div>
-                    <p className="text-xs text-muted-foreground mb-4">Your organization and all conversions are audit-ready.</p>
-                    <Button variant="outline" size="sm" className="w-full">
+                    <p className="text-xs text-muted-foreground mb-3 sm:mb-4">Your organization and all conversions are audit-ready.</p>
+                    <Button variant="outline" size="sm" className="w-full text-xs sm:text-sm">
                       View Audit Trail
                     </Button>
                   </CardContent>
                 </Card>
 
                 <Card>
-                  <CardHeader className="pb-3">
-                    <CardTitle className="text-lg">Quick Actions</CardTitle>
+                  <CardHeader className="pb-2 sm:pb-3 p-4 sm:p-6">
+                    <CardTitle className="text-base sm:text-lg">Quick Actions</CardTitle>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="p-4 sm:p-6 pt-0">
                     <div className="space-y-2">
-                      <Button className="w-full justify-start" size="sm">
+                      <Button className="w-full justify-start text-xs sm:text-sm" size="sm">
                         New Conversion
                       </Button>
-                      <Button variant="outline" className="w-full justify-start" size="sm">
+                      <Button variant="outline" className="w-full justify-start text-xs sm:text-sm" size="sm">
                         Download Report
                       </Button>
-                      <Button variant="outline" className="w-full justify-start" size="sm">
+                      <Button variant="outline" className="w-full justify-start text-xs sm:text-sm" size="sm">
                         View Wallets
                       </Button>
                     </div>

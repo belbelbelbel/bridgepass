@@ -58,21 +58,23 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="pt-32 pb-20 px-6 bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-primary mb-6 leading-tight">
+      <section className="w-full h-[90vh] px-4 sm:px-6 lg:px-8 bg-white flex items-center justify-center">
+        <div className="w-full max-w-5xl mx-auto text-center flex flex-col items-center justify-center space-y-6 sm:space-y-8">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-tight px-4">
             Secure International Payments for NGOs
           </h1>
-          <p className="text-xl text-foreground/70 mb-8 leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed px-4">
             Receive donations in multiple currencies, lock competitive FX rates, and convert to NGN with complete transparency. Built for trust, compliance, and simplicity.
           </p>
-          <Link 
-            href="/auth/register" 
-            className="inline-flex cursor-pointer items-center gap-2 px-6 py-4 text-md bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-all transform hover:scale-105"
-          >
-            Start Your NGO Registration
-            <ArrowRight className="w-5 h-5" />
-          </Link>
+          <div className="pt-2 px-4">
+            <Link 
+              href="/auth/register" 
+              className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-black text-white rounded-lg font-semibold hover:bg-gray-800 transition-colors text-sm sm:text-base"
+            >
+              Start Your NGO Registration
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+            </Link>
+          </div>
         </div>
       </section>
       
@@ -85,12 +87,12 @@ export default function Home() {
       {/* Security & Compliance */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white border-t border-gray-200">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Enterprise Security & Compliance</h2>
-            <p className="text-base text-gray-600">Bank-level security with regulatory compliance</p>
+          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-black">Enterprise Security & Compliance</h2>
+            <p className="text-sm sm:text-base text-gray-600 px-4">Bank-level security with regulatory compliance</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {[
               {
                 icon: Shield,
@@ -108,12 +110,12 @@ export default function Home() {
                 description: 'Full regulatory compliance with Nigerian and international standards'
               }
             ].map((item, idx) => (
-              <div key={idx} className="p-8 bg-white border border-gray-200 rounded-lg hover:border-gray-300 transition-colors shadow-sm">
-                <div className="w-14 h-14 bg-white border border-gray-200 rounded-lg flex items-center justify-center mb-6 shadow-sm">
-                  <item.icon className="w-7 h-7 text-black" />
+              <div key={idx} className="p-6 sm:p-8 bg-white border border-gray-200 rounded-lg hover:border-gray-300 transition-colors shadow-sm">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white border border-gray-200 rounded-lg flex items-center justify-center mb-4 sm:mb-6 shadow-sm">
+                  <item.icon className="w-6 h-6 sm:w-7 sm:h-7 text-black" />
                 </div>
-                <h3 className="text-lg font-bold mb-3 text-black">{item.title}</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
+                <h3 className="text-base sm:text-lg font-bold mb-2 sm:mb-3 text-black">{item.title}</h3>
+                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>

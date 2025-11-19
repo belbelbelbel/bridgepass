@@ -34,24 +34,24 @@ export default function AnalyticsCards() {
   ]
 
   return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
       {cards.map((card, idx) => (
         <Card key={idx} className="animate-slide-in-up">
-          <CardHeader className="pb-3">
-            <CardTitle className="text-sm font-medium text-muted-foreground">
+          <CardHeader className="pb-2 sm:pb-3 p-4 sm:p-6">
+            <CardTitle className="text-xs sm:text-sm font-medium text-muted-foreground">
               {card.title}
             </CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="p-4 sm:p-6 pt-0">
             <div className="flex items-end justify-between">
-              <div>
-                <p className="text-2xl font-bold text-foreground">{card.value}</p>
-                <p className={`text-xs font-medium mt-2 ${card.positive ? 'text-green-600' : 'text-red-600'}`}>
+              <div className="min-w-0 flex-1">
+                <p className="text-xl sm:text-2xl font-bold text-foreground truncate">{card.value}</p>
+                <p className={`text-xs font-medium mt-1 sm:mt-2 ${card.positive ? 'text-green-600' : 'text-red-600'}`}>
                   {card.change}
                 </p>
               </div>
               {card.icon && (
-                <card.icon className={`w-6 h-6 ${card.positive ? 'text-green-600' : 'text-red-600'}`} />
+                <card.icon className={`w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0 ml-2 ${card.positive ? 'text-green-600' : 'text-red-600'}`} />
               )}
             </div>
           </CardContent>

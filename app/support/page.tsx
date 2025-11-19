@@ -8,8 +8,8 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Badge } from '@/components/ui/badge'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import Link from 'next/link'
-import Navbar from '@/components/navbar'
-import Footer from '@/components/footer'
+import DashboardSidebar from '@/components/dashboard/sidebar'
+import TopNav from '@/components/dashboard/top-nav'
 
 const knowledgeBaseCategories = [
   {
@@ -87,40 +87,44 @@ export default function SupportPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
+    <div className="flex h-screen bg-background">
+      <DashboardSidebar />
       
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="flex-1 flex flex-col overflow-hidden">
+        <TopNav />
+        
+        <main className="flex-1 overflow-auto">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">How can we help you?</h1>
-          <p className="text-lg text-muted-foreground mb-8">
+        <div className="text-center mb-8 sm:mb-12">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">How can we help you?</h1>
+          <p className="text-sm sm:text-base lg:text-lg text-muted-foreground mb-6 sm:mb-8 px-4">
             Find answers to common questions or reach out to our support team
           </p>
           
           {/* Search Bar */}
-          <form onSubmit={handleSearch} className="max-w-2xl mx-auto">
+          <form onSubmit={handleSearch} className="max-w-2xl mx-auto px-4">
             <div className="relative">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
+              <Search className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground" />
               <Input
                 type="search"
                 placeholder="Search for help articles, guides, or topics..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-12 pr-4 py-6 text-lg"
+                className="pl-10 sm:pl-12 pr-4 py-4 sm:py-6 text-sm sm:text-base lg:text-lg"
               />
             </div>
           </form>
         </div>
 
         {/* Quick Actions */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
           <Link href="/support/tickets/new">
             <Card className="hover:border-primary transition-colors cursor-pointer h-full">
-              <CardContent className="p-6">
-                <MessageSquare className="w-10 h-10 text-primary mb-4" />
-                <h3 className="font-semibold mb-2">Submit a Ticket</h3>
-                <p className="text-sm text-muted-foreground">
+              <CardContent className="p-4 sm:p-6">
+                <MessageSquare className="w-8 h-8 sm:w-10 sm:h-10 text-primary mb-3 sm:mb-4" />
+                <h3 className="text-sm sm:text-base font-semibold mb-2">Submit a Ticket</h3>
+                <p className="text-xs sm:text-sm text-muted-foreground">
                   Get help from our support team. We typically respond within 24 hours.
                 </p>
               </CardContent>
@@ -129,26 +133,26 @@ export default function SupportPage() {
           
           <Link href="/support/chat">
             <Card className="hover:border-primary transition-colors cursor-pointer h-full">
-              <CardContent className="p-6">
-                <Video className="w-10 h-10 text-primary mb-4" />
-                <h3 className="font-semibold mb-2">Live Chat</h3>
-                <p className="text-sm text-muted-foreground">
+              <CardContent className="p-4 sm:p-6">
+                <Video className="w-8 h-8 sm:w-10 sm:h-10 text-primary mb-3 sm:mb-4" />
+                <h3 className="text-sm sm:text-base font-semibold mb-2">Live Chat</h3>
+                <p className="text-xs sm:text-sm text-muted-foreground">
                   Chat with our support team. Available Monday-Friday, 9am-5pm WAT.
                 </p>
               </CardContent>
             </Card>
           </Link>
           
-          <Card className="hover:border-primary transition-colors cursor-pointer h-full">
-            <CardContent className="p-6">
-              <MessageSquare className="w-10 h-10 text-primary mb-4" />
-              <h3 className="font-semibold mb-2">Contact Support</h3>
-              <p className="text-sm text-muted-foreground mb-2">
-                <a href="mailto:support@nairabridge.com" className="text-primary hover:underline">
+          <Card className="hover:border-primary transition-colors cursor-pointer h-full sm:col-span-2 lg:col-span-1">
+            <CardContent className="p-4 sm:p-6">
+              <MessageSquare className="w-8 h-8 sm:w-10 sm:h-10 text-primary mb-3 sm:mb-4" />
+              <h3 className="text-sm sm:text-base font-semibold mb-2">Contact Support</h3>
+              <p className="text-xs sm:text-sm text-muted-foreground mb-2">
+                <a href="mailto:support@nairabridge.com" className="text-primary hover:underline break-all">
                   support@nairabridge.com
                 </a>
               </p>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-xs sm:text-sm text-muted-foreground">
                 +234 (0) 800-000-0000
               </p>
             </CardContent>
@@ -157,26 +161,26 @@ export default function SupportPage() {
 
         {/* Tabs */}
         <Tabs defaultValue="knowledge-base" className="w-full">
-          <TabsList className="grid w-full grid-cols-2 max-w-md mx-auto mb-8">
-            <TabsTrigger value="knowledge-base">Knowledge Base</TabsTrigger>
-            <TabsTrigger value="tickets">My Tickets</TabsTrigger>
+          <TabsList className="grid w-full grid-cols-2 max-w-md mx-auto mb-6 sm:mb-8">
+            <TabsTrigger value="knowledge-base" className="text-xs sm:text-sm">Knowledge Base</TabsTrigger>
+            <TabsTrigger value="tickets" className="text-xs sm:text-sm">My Tickets</TabsTrigger>
           </TabsList>
 
           {/* Knowledge Base Tab */}
-          <TabsContent value="knowledge-base" className="space-y-8">
+          <TabsContent value="knowledge-base" className="space-y-6 sm:space-y-8">
             {/* Popular Articles */}
             <div>
-              <h2 className="text-2xl font-bold mb-6">Popular Articles</h2>
-              <div className="grid md:grid-cols-2 gap-4">
+              <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Popular Articles</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 {popularArticles.map((article) => (
                   <Card key={article.id} className="hover:border-primary transition-colors cursor-pointer">
-                    <CardContent className="p-4">
-                      <div className="flex items-start justify-between">
-                        <div className="flex-1">
+                    <CardContent className="p-3 sm:p-4">
+                      <div className="flex items-start justify-between gap-2">
+                        <div className="flex-1 min-w-0">
                           <Badge variant="outline" className="mb-2 text-xs">{article.category}</Badge>
-                          <h3 className="font-semibold mb-1">{article.title}</h3>
+                          <h3 className="text-sm sm:text-base font-semibold mb-1 truncate">{article.title}</h3>
                         </div>
-                        <ChevronRight className="w-5 h-5 text-muted-foreground flex-shrink-0 ml-2" />
+                        <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground flex-shrink-0" />
                       </div>
                     </CardContent>
                   </Card>
@@ -186,32 +190,32 @@ export default function SupportPage() {
 
             {/* Categories */}
             <div>
-              <h2 className="text-2xl font-bold mb-6">Browse by Category</h2>
-              <div className="space-y-6">
+              <h2 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Browse by Category</h2>
+              <div className="space-y-4 sm:space-y-6">
                 {knowledgeBaseCategories.map((category) => (
                   <Card key={category.id}>
-                    <CardHeader>
-                      <div className="flex items-center gap-3">
-                        <category.icon className="w-6 h-6 text-primary" />
-                        <CardTitle>{category.title}</CardTitle>
+                    <CardHeader className="p-4 sm:p-6">
+                      <div className="flex items-center gap-2 sm:gap-3">
+                        <category.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary flex-shrink-0" />
+                        <CardTitle className="text-base sm:text-lg">{category.title}</CardTitle>
                       </div>
                     </CardHeader>
-                    <CardContent>
-                      <div className="grid md:grid-cols-2 gap-4">
+                    <CardContent className="p-4 sm:p-6 pt-0">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                         {category.articles.map((article) => (
                           <Link
                             key={article.id}
                             href={`/support/articles/${article.id}`}
-                            className="flex items-start justify-between p-3 rounded-lg hover:bg-muted transition-colors group"
+                            className="flex items-start justify-between p-3 rounded-lg hover:bg-muted transition-colors group gap-2"
                           >
-                            <div className="flex-1">
-                              <h4 className="font-medium mb-1 group-hover:text-primary transition-colors">
+                            <div className="flex-1 min-w-0">
+                              <h4 className="text-sm sm:text-base font-medium mb-1 group-hover:text-primary transition-colors truncate">
                                 {article.title}
                               </h4>
-                              <p className="text-sm text-muted-foreground mb-2">{article.description}</p>
+                              <p className="text-xs sm:text-sm text-muted-foreground mb-2 line-clamp-2">{article.description}</p>
                               <p className="text-xs text-muted-foreground">{article.views.toLocaleString()} views</p>
                             </div>
-                            <ChevronRight className="w-4 h-4 text-muted-foreground flex-shrink-0 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                            <ChevronRight className="w-4 h-4 text-muted-foreground flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity" />
                           </Link>
                         ))}
                       </div>
@@ -224,26 +228,26 @@ export default function SupportPage() {
 
           {/* My Tickets Tab */}
           <TabsContent value="tickets">
-            <div className="flex items-center justify-between mb-6">
-              <h2 className="text-2xl font-bold">Support Tickets</h2>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4 sm:mb-6">
+              <h2 className="text-xl sm:text-2xl font-bold">Support Tickets</h2>
               <Link href="/support/tickets/new">
-                <Button>
-                  <Plus className="w-4 h-4 mr-2" />
+                <Button size="sm" className="w-full sm:w-auto text-xs sm:text-sm">
+                  <Plus className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
                   New Ticket
                 </Button>
               </Link>
             </div>
             
             <Card>
-              <CardContent className="p-6">
-                <div className="text-center py-12">
-                  <MessageSquare className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-                  <h3 className="font-semibold mb-2">No tickets yet</h3>
-                  <p className="text-sm text-muted-foreground mb-6">
+              <CardContent className="p-4 sm:p-6">
+                <div className="text-center py-8 sm:py-12">
+                  <MessageSquare className="w-10 h-10 sm:w-12 sm:h-12 text-muted-foreground mx-auto mb-3 sm:mb-4" />
+                  <h3 className="text-base sm:text-lg font-semibold mb-2">No tickets yet</h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground mb-4 sm:mb-6">
                     Submit your first support ticket to get help from our team
                   </p>
                   <Link href="/support/tickets/new">
-                    <Button>
+                    <Button size="sm" className="text-xs sm:text-sm">
                       Create Your First Ticket
                     </Button>
                   </Link>
@@ -252,9 +256,9 @@ export default function SupportPage() {
             </Card>
           </TabsContent>
         </Tabs>
-      </main>
-
-      <Footer />
+          </div>
+        </main>
+      </div>
     </div>
   )
 }

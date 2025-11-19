@@ -51,14 +51,14 @@ export default function OrgDetailsStep({
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 sm:space-y-6">
       <div>
-        <h2 className="text-2xl font-bold text-primary mb-2">Organization Details</h2>
-        <p className="text-foreground/70">Tell us about your NGO</p>
+        <h2 className="text-xl sm:text-2xl font-bold text-primary mb-1 sm:mb-2">Organization Details</h2>
+        <p className="text-xs sm:text-sm text-foreground/70">Tell us about your NGO</p>
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-foreground mb-2">
+        <label className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">
           Organization Name *
         </label>
         <input
@@ -66,20 +66,20 @@ export default function OrgDetailsStep({
           placeholder="Enter your NGO's registered name"
           value={data.orgName}
           onChange={(e) => handleChange('orgName', e.target.value)}
-          className={`w-full px-4 py-3 border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all ${
+          className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all ${
             errors.orgName ? 'border-destructive' : 'border-border'
           }`}
         />
         {errors.orgName && (
-          <div className="flex items-center gap-2 mt-2 text-destructive text-sm">
-            <AlertCircle className="w-4 h-4" />
-            {errors.orgName}
+          <div className="flex items-center gap-2 mt-1 sm:mt-2 text-destructive text-xs sm:text-sm">
+            <AlertCircle className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
+            <span>{errors.orgName}</span>
           </div>
         )}
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-foreground mb-2">
+        <label className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">
           CAC Certificate Number *
         </label>
         <input
@@ -87,20 +87,20 @@ export default function OrgDetailsStep({
           placeholder="e.g., RC123456789"
           value={data.cacCertificate}
           onChange={(e) => handleChange('cacCertificate', e.target.value)}
-          className={`w-full px-4 py-3 border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all ${
+          className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all ${
             errors.cacCertificate ? 'border-destructive' : 'border-border'
           }`}
         />
         {errors.cacCertificate && (
-          <div className="flex items-center gap-2 mt-2 text-destructive text-sm">
-            <AlertCircle className="w-4 h-4" />
-            {errors.cacCertificate}
+          <div className="flex items-center gap-2 mt-1 sm:mt-2 text-destructive text-xs sm:text-sm">
+            <AlertCircle className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
+            <span>{errors.cacCertificate}</span>
           </div>
         )}
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-foreground mb-2">
+        <label className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">
           Tax Identification Number (TIN) *
         </label>
         <input
@@ -108,30 +108,30 @@ export default function OrgDetailsStep({
           placeholder="Enter your TIN"
           value={data.tin}
           onChange={(e) => handleChange('tin', e.target.value)}
-          className={`w-full px-4 py-3 border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all ${
+          className={`w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border rounded-lg bg-background focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all ${
             errors.tin ? 'border-destructive' : 'border-border'
           }`}
         />
         {errors.tin && (
-          <div className="flex items-center gap-2 mt-2 text-destructive text-sm">
-            <AlertCircle className="w-4 h-4" />
-            {errors.tin}
+          <div className="flex items-center gap-2 mt-1 sm:mt-2 text-destructive text-xs sm:text-sm">
+            <AlertCircle className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
+            <span>{errors.tin}</span>
           </div>
         )}
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-foreground mb-2">
+        <label className="block text-xs sm:text-sm font-medium text-foreground mb-1 sm:mb-2">
           Board Resolution File (Optional)
         </label>
-        <div className="space-y-3">
+        <div className="space-y-2 sm:space-y-3">
           <button
             type="button"
             onClick={() => fileInputRef.current?.click()}
-            className="w-full flex items-center justify-center gap-2 px-4 py-3 border-2 border-dashed border-border rounded-lg hover:border-primary/50 hover:bg-background/50 transition-all"
+            className="w-full flex items-center justify-center gap-2 px-3 sm:px-4 py-2.5 sm:py-3 border-2 border-dashed border-border rounded-lg hover:border-primary/50 hover:bg-background/50 transition-all"
           >
-            <Upload className="w-4 h-4" />
-            <span className="text-sm font-medium">Click to upload board resolution</span>
+            <Upload className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
+            <span className="text-xs sm:text-sm font-medium">Click to upload board resolution</span>
           </button>
           <input
             ref={fileInputRef}
@@ -143,20 +143,20 @@ export default function OrgDetailsStep({
           <p className="text-xs text-foreground/70">Supports PDF, JPG, PNG (Max 10MB)</p>
           
           {boardResolutionFile && (
-            <div className="flex items-center justify-between p-3 bg-background rounded-lg border border-border">
+            <div className="flex items-center justify-between p-2 sm:p-3 bg-background rounded-lg border border-border">
               <div className="flex items-center gap-2 min-w-0 flex-1">
-                <FileIcon className="w-4 h-4 text-primary flex-shrink-0" />
+                <FileIcon className="w-3 h-3 sm:w-4 sm:h-4 text-primary flex-shrink-0" />
                 <div className="min-w-0 flex-1">
-                  <p className="text-sm font-medium truncate">{boardResolutionFile.name}</p>
+                  <p className="text-xs sm:text-sm font-medium truncate">{boardResolutionFile.name}</p>
                   <p className="text-xs text-foreground/70">{formatSize(boardResolutionFile.size)}</p>
                 </div>
               </div>
               <button
                 type="button"
                 onClick={removeBoardResolutionFile}
-                className="p-1.5 hover:bg-destructive/10 rounded transition-colors flex-shrink-0"
+                className="p-1 sm:p-1.5 hover:bg-destructive/10 rounded transition-colors flex-shrink-0"
               >
-                <X className="w-4 h-4 text-destructive" />
+                <X className="w-3 h-3 sm:w-4 sm:h-4 text-destructive" />
               </button>
             </div>
           )}

@@ -14,10 +14,8 @@ function RegisterPageContent() {
   const totalSteps = 4
 
   useEffect(() => {
-    // Check if coming from successful registration
     if (searchParams.get('success') === 'true') {
       setShowSuccess(true)
-      // Auto-redirect after 3 seconds
       const timer = setTimeout(() => {
         router.push('/dashboard?fromRegistration=true')
       }, 3000)
@@ -27,7 +25,6 @@ function RegisterPageContent() {
 
   const handleStepComplete = (nextStep: number) => {
     if (nextStep > totalSteps) {
-      // Show success message before redirecting
       router.push('/auth/register?success=true')
     } else {
       setCurrentStep(nextStep)
@@ -66,36 +63,36 @@ function RegisterPageContent() {
   return (
     <main className="min-h-screen bg-background">
       <div className="bg-white border-b border-border sticky top-0 z-40">
-        <div className="max-w-4xl mx-auto px-6 py-6">
-          <h1 className="text-2xl font-bold text-primary mb-2">NGO Registration</h1>
-          <p className="text-foreground/70">Complete your KYC verification to start receiving donations</p>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
+          <h1 className="text-xl sm:text-2xl font-bold text-primary mb-1 sm:mb-2">NGO Registration</h1>
+          <p className="text-xs sm:text-sm text-foreground/70">Complete your KYC verification to start receiving donations</p>
         </div>
       </div>
       <div className="bg-white border-b border-border">
-        <div className="max-w-4xl mx-auto px-6 py-8">
-          <div className="flex items-center justify-between">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 py-4 sm:py-6 lg:py-8">
+          <div className="flex items-center justify-between gap-1 sm:gap-2">
             {Array.from({ length: totalSteps }).map((_, idx) => {
               const stepNum = idx + 1
               const isCompleted = stepNum < currentStep
               const isCurrent = stepNum === currentStep
               
               return (
-                <div key={idx} className="flex items-center flex-1">
+                <div key={idx} className="flex items-center flex-1 min-w-0">
                   <div className={`
-                    w-10 h-10 rounded-full flex items-center justify-center font-semibold
-                    transition-all duration-300
+                    w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-semibold text-xs sm:text-sm
+                    transition-all duration-300 flex-shrink-0
                     ${isCompleted 
                       ? 'bg-primary text-primary-foreground' 
                       : isCurrent 
-                      ? 'bg-primary text-primary-foreground ring-4 ring-primary/20' 
+                      ? 'bg-primary text-primary-foreground ring-2 sm:ring-4 ring-primary/20' 
                       : 'bg-gray-100 text-foreground'
                     }
                   `}>
-                    {isCompleted ? <Check className="w-5 h-5" /> : stepNum}
+                    {isCompleted ? <Check className="w-4 h-4 sm:w-5 sm:h-5" /> : stepNum}
                   </div>
                   {idx < totalSteps - 1 && (
                     <div className={`
-                      flex-1 h-1 mx-2 rounded-full transition-all duration-300
+                      flex-1 h-0.5 sm:h-1 mx-1 sm:mx-2 rounded-full transition-all duration-300
                       ${stepNum < currentStep ? 'bg-primary' : 'bg-border'}
                     `} />
                   )}
@@ -103,14 +100,14 @@ function RegisterPageContent() {
               )
             })}
           </div>
-          <p className="text-center text-foreground/70 mt-4 text-sm">
+          <p className="text-center text-foreground/70 mt-3 sm:mt-4 text-xs sm:text-sm">
             Step {currentStep} of {totalSteps}
           </p>
         </div>
       </div>
 
       {/* Form */}
-      <div className="max-w-4xl mx-auto px-6 py-12">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
         <OnboardingForm 
           currentStep={currentStep} 
           onStepComplete={handleStepComplete}

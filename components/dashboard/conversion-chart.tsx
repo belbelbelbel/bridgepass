@@ -15,28 +15,40 @@ const data = [
 export default function ConversionChart() {
   return (
     <Card>
-      <CardHeader>
-        <CardTitle>Conversion History</CardTitle>
+      <CardHeader className="p-4 sm:p-6">
+        <CardTitle className="text-base sm:text-lg">Conversion History</CardTitle>
       </CardHeader>
-      <CardContent>
-        <ResponsiveContainer width="100%" height={300}>
-          <BarChart data={data}>
-            <CartesianGrid strokeDasharray="3 3" stroke="var(--color-border)" />
-            <XAxis dataKey="month" stroke="var(--color-muted-foreground)" />
-            <YAxis stroke="var(--color-muted-foreground)" />
-            <Tooltip
-              contentStyle={{
-                backgroundColor: 'var(--color-card)',
-                border: `1px solid var(--color-border)`,
-                borderRadius: '8px'
-              }}
-            />
-            <Legend />
-            <Bar dataKey="usd" fill="var(--color-primary)" radius={[8, 8, 0, 0]} />
-            <Bar dataKey="eur" fill="var(--color-accent)" radius={[8, 8, 0, 0]} />
-            <Bar dataKey="gbp" fill="var(--color-secondary)" radius={[8, 8, 0, 0]} />
-          </BarChart>
-        </ResponsiveContainer>
+      <CardContent className="p-4 sm:p-6 pt-0">
+        <div className="w-full overflow-x-auto">
+          <ResponsiveContainer width="100%" height={250} className="min-h-[250px] sm:min-h-[300px]">
+            <BarChart data={data} margin={{ top: 5, right: 10, left: 0, bottom: 5 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke="var(--color-border)" />
+              <XAxis 
+                dataKey="month" 
+                stroke="var(--color-muted-foreground)" 
+                fontSize={12}
+                tick={{ fill: 'var(--color-muted-foreground)' }}
+              />
+              <YAxis 
+                stroke="var(--color-muted-foreground)" 
+                fontSize={12}
+                tick={{ fill: 'var(--color-muted-foreground)' }}
+              />
+              <Tooltip
+                contentStyle={{
+                  backgroundColor: 'var(--color-card)',
+                  border: `1px solid var(--color-border)`,
+                  borderRadius: '8px',
+                  fontSize: '12px'
+                }}
+              />
+              <Legend wrapperStyle={{ fontSize: '12px' }} />
+              <Bar dataKey="usd" fill="var(--color-primary)" radius={[8, 8, 0, 0]} />
+              <Bar dataKey="eur" fill="var(--color-accent)" radius={[8, 8, 0, 0]} />
+              <Bar dataKey="gbp" fill="var(--color-secondary)" radius={[8, 8, 0, 0]} />
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
       </CardContent>
     </Card>
   )

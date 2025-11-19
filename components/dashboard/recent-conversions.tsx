@@ -52,52 +52,56 @@ const conversions = [
 export default function RecentConversions() {
   return (
     <Card>
-      <CardHeader>
-        <CardTitle>Recent Conversions</CardTitle>
+      <CardHeader className="p-4 sm:p-6">
+        <CardTitle className="text-base sm:text-lg">Recent Conversions</CardTitle>
       </CardHeader>
-      <CardContent>
-        <Table>
-          <TableHeader>
-            <TableRow className="border-border">
-              <TableHead>Date</TableHead>
-              <TableHead>From</TableHead>
-              <TableHead>To</TableHead>
-              <TableHead>Rate</TableHead>
-              <TableHead>Saved vs Bank</TableHead>
-              <TableHead>Status</TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {conversions.map((conversion) => (
-              <TableRow key={conversion.id} className="border-border hover:bg-muted/50">
-                <TableCell className="font-medium">{conversion.date}</TableCell>
-                <TableCell>{conversion.from}</TableCell>
-                <TableCell>{conversion.to}</TableCell>
-                <TableCell className="font-mono text-sm">{conversion.rate}</TableCell>
-                <TableCell className="font-medium text-green-600">{conversion.saved}</TableCell>
-                <TableCell>
-                  <div className="flex items-center gap-2">
-                    {conversion.status === 'completed' ? (
-                      <>
-                        <CheckCircle2 className="w-4 h-4 text-green-600" />
-                        <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200">
-                          Completed
-                        </Badge>
-                      </>
-                    ) : (
-                      <>
-                        <Clock className="w-4 h-4 text-yellow-600 animate-spin" />
-                        <Badge variant="outline" className="bg-yellow-50 text-yellow-700 border-yellow-200">
-                          Processing
-                        </Badge>
-                      </>
-                    )}
-                  </div>
-                </TableCell>
+      <CardContent className="p-0 sm:p-6">
+        <div className="overflow-x-auto">
+          <Table>
+            <TableHeader>
+              <TableRow className="border-border">
+                <TableHead className="text-xs sm:text-sm">Date</TableHead>
+                <TableHead className="text-xs sm:text-sm">From</TableHead>
+                <TableHead className="text-xs sm:text-sm hidden sm:table-cell">To</TableHead>
+                <TableHead className="text-xs sm:text-sm hidden md:table-cell">Rate</TableHead>
+                <TableHead className="text-xs sm:text-sm hidden lg:table-cell">Saved</TableHead>
+                <TableHead className="text-xs sm:text-sm">Status</TableHead>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
+            </TableHeader>
+            <TableBody>
+              {conversions.map((conversion) => (
+                <TableRow key={conversion.id} className="border-border hover:bg-muted/50">
+                  <TableCell className="font-medium text-xs sm:text-sm">{conversion.date}</TableCell>
+                  <TableCell className="text-xs sm:text-sm">{conversion.from}</TableCell>
+                  <TableCell className="text-xs sm:text-sm hidden sm:table-cell">{conversion.to}</TableCell>
+                  <TableCell className="font-mono text-xs sm:text-sm hidden md:table-cell">{conversion.rate}</TableCell>
+                  <TableCell className="font-medium text-green-600 text-xs sm:text-sm hidden lg:table-cell">{conversion.saved}</TableCell>
+                  <TableCell>
+                    <div className="flex items-center gap-1 sm:gap-2">
+                      {conversion.status === 'completed' ? (
+                        <>
+                          <CheckCircle2 className="w-3 h-3 sm:w-4 sm:h-4 text-green-600 flex-shrink-0" />
+                          <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200 text-xs">
+                            <span className="hidden sm:inline">Completed</span>
+                            <span className="sm:hidden">Done</span>
+                          </Badge>
+                        </>
+                      ) : (
+                        <>
+                          <Clock className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-600 animate-spin flex-shrink-0" />
+                          <Badge variant="outline" className="bg-yellow-50 text-yellow-700 border-yellow-200 text-xs">
+                            <span className="hidden sm:inline">Processing</span>
+                            <span className="sm:hidden">Proc</span>
+                          </Badge>
+                        </>
+                      )}
+                    </div>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </div>
       </CardContent>
     </Card>
   )

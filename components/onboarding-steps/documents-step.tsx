@@ -85,10 +85,10 @@ export default function DocumentsStep({
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 sm:space-y-6">
       <div>
-        <h2 className="text-2xl font-bold text-primary mb-2">Required Documents</h2>
-        <p className="text-foreground/70">Upload CAC certificate, board resolution, and any supporting documents</p>
+        <h2 className="text-xl sm:text-2xl font-bold text-primary mb-1 sm:mb-2">Required Documents</h2>
+        <p className="text-xs sm:text-sm text-foreground/70">Upload CAC certificate, board resolution, and any supporting documents</p>
       </div>
 
       <div
@@ -97,15 +97,15 @@ export default function DocumentsStep({
         onDragOver={handleDrag}
         onDrop={handleDrop}
         onClick={handleUploadClick}
-        className={`border-2 border-dashed rounded-lg p-12 text-center cursor-pointer transition-all ${
+        className={`border-2 border-dashed rounded-lg p-6 sm:p-8 lg:p-12 text-center cursor-pointer transition-all ${
           dragActive
             ? 'border-primary bg-primary/5'
             : 'border-border hover:border-primary/50 hover:bg-background/50'
         }`}
       >
-        <Upload className={`w-8 h-8 mx-auto mb-3 ${dragActive ? 'text-primary' : 'text-foreground/50'}`} />
-        <p className="font-medium text-foreground mb-1">Drag files here or click to upload</p>
-        <p className="text-sm text-foreground/70">Supports PDF, JPG, PNG (Max 10MB each)</p>
+        <Upload className={`w-6 h-6 sm:w-8 sm:h-8 mx-auto mb-2 sm:mb-3 ${dragActive ? 'text-primary' : 'text-foreground/50'}`} />
+        <p className="text-sm sm:text-base font-medium text-foreground mb-1">Drag files here or click to upload</p>
+        <p className="text-xs sm:text-sm text-foreground/70">Supports PDF, JPG, PNG (Max 10MB each)</p>
         <input
           ref={fileInputRef}
           type="file"
@@ -117,21 +117,21 @@ export default function DocumentsStep({
       </div>
 
       {errors.documents && (
-        <div className="flex items-center gap-2 p-4 bg-destructive/10 border border-destructive/30 rounded-lg text-destructive text-sm">
-          <AlertCircle className="w-4 h-4 flex-shrink-0" />
-          {errors.documents}
+        <div className="flex items-center gap-2 p-3 sm:p-4 bg-destructive/10 border border-destructive/30 rounded-lg text-destructive text-xs sm:text-sm">
+          <AlertCircle className="w-3 h-3 sm:w-4 sm:h-4 flex-shrink-0" />
+          <span>{errors.documents}</span>
         </div>
       )}
 
       {data.documents.length > 0 && (
         <div>
-          <h3 className="font-medium text-foreground mb-3">Uploaded Documents ({data.documents.length})</h3>
+          <h3 className="text-sm sm:text-base font-medium text-foreground mb-2 sm:mb-3">Uploaded Documents ({data.documents.length})</h3>
           <div className="space-y-2">
             {data.documents.map((doc: any) => (
-              <div key={doc.id} className="flex items-center justify-between p-4 bg-background rounded-lg border border-border hover:border-primary/30 transition-all">
-                <div className="flex items-center gap-3 flex-1 min-w-0">
+              <div key={doc.id} className="flex items-center justify-between p-3 sm:p-4 bg-background rounded-lg border border-border hover:border-primary/30 transition-all">
+                <div className="flex items-center gap-2 sm:gap-3 flex-1 min-w-0">
                   {doc.preview ? (
-                    <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-background border border-border overflow-hidden">
+                    <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-background border border-border overflow-hidden">
                       <img 
                         src={doc.preview || "/placeholder.svg"} 
                         alt={doc.name}
@@ -139,19 +139,19 @@ export default function DocumentsStep({
                       />
                     </div>
                   ) : (
-                    <FileIcon className="w-5 h-5 text-primary flex-shrink-0" />
+                    <FileIcon className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" />
                   )}
                   <div className="min-w-0 flex-1">
-                    <p className="font-medium text-foreground truncate">{doc.name}</p>
+                    <p className="text-xs sm:text-sm font-medium text-foreground truncate">{doc.name}</p>
                     <p className="text-xs text-foreground/70">{formatSize(doc.size)}</p>
                   </div>
                 </div>
                 <button
                   onClick={() => removeDocument(doc.id)}
-                  className="p-2 hover:bg-destructive/10 rounded-lg transition-colors flex-shrink-0 ml-2"
+                  className="p-1.5 sm:p-2 hover:bg-destructive/10 rounded-lg transition-colors flex-shrink-0 ml-2"
                   aria-label="Remove document"
                 >
-                  <X className="w-5 h-5 text-destructive" />
+                  <X className="w-4 h-4 sm:w-5 sm:h-5 text-destructive" />
                 </button>
               </div>
             ))}

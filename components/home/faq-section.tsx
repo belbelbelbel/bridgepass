@@ -35,32 +35,32 @@ export default function FAQSection() {
   ]
 
   return (
-    <section id="faq" className="py-24 px-4 sm:px-6 lg:px-8 bg-white border-t border-gray-200">
+    <section id="faq" className="py-12 sm:py-16 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white border-t border-gray-200">
       <div className="max-w-3xl mx-auto">
-        <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Frequently Asked Questions</h2>
-          <p className="text-base text-gray-600">Everything you need to know about Naira Bridge</p>
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-black">Frequently Asked Questions</h2>
+          <p className="text-sm sm:text-base text-gray-600 px-4">Everything you need to know about Naira Bridge</p>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {faqs.map((faq, idx) => (
             <div key={idx} className="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm">
               <button
                 onClick={() => setOpenId(openId === idx ? -1 : idx)}
-                className="w-full flex items-center justify-between p-6 hover:bg-gray-50 transition-colors text-left"
+                className="w-full flex items-center justify-between p-4 sm:p-6 hover:bg-gray-50 transition-colors text-left gap-3"
               >
-                <span className="font-semibold text-black">{faq.question}</span>
+                <span className="font-semibold text-black text-sm sm:text-base pr-2">{faq.question}</span>
                 <ChevronDown
                   className={cn(
-                    'w-5 h-5 text-gray-600 transition-transform',
+                    'w-4 h-4 sm:w-5 sm:h-5 text-gray-600 transition-transform flex-shrink-0',
                     openId === idx && 'transform rotate-180'
                   )}
                 />
               </button>
 
               {openId === idx && (
-                <div className="px-6 pb-6 pt-0 border-t border-gray-200">
-                  <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+                <div className="px-4 sm:px-6 pb-4 sm:pb-6 pt-0 border-t border-gray-200">
+                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{faq.answer}</p>
                 </div>
               )}
             </div>
